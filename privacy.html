@@ -286,13 +286,13 @@
             }
         };
 
-        // Sprawdź zapisany język z localStorage lub ustaw domyślny
+        // Sprawdź zapisany język z localStorage (ten sam klucz co na stronie głównej)
         function getSavedLanguage() {
             const savedLang = localStorage.getItem('eyeProtectorLanguage');
             return savedLang || 'pl';
         }
 
-        // Zapisz wybrany język
+        // Zapisz wybrany język (ten sam klucz co na stronie głównej)
         function saveLanguage(lang) {
             localStorage.setItem('eyeProtectorLanguage', lang);
         }
@@ -315,6 +315,7 @@
 
         // Inicjalizacja po załadowaniu strony
         document.addEventListener('DOMContentLoaded', function() {
+            // Pobierz język z localStorage (ten sam co strona główna)
             const currentLang = getSavedLanguage();
             
             // Ustaw aktywny przycisk języka
@@ -337,7 +338,7 @@
                     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Zapisz i zastosuj język
+                    // Zapisz i zastosuj język (ten sam klucz co strona główna)
                     saveLanguage(selectedLang);
                     applyPrivacyTranslations(selectedLang);
                 });
