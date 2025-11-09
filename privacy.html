@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności - EyeProtector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Użyj tych samych styli co na stronie głównej lub dostosuj */
+        :root {
+            --primary-blue: #2a5c8d;
+            --light-blue: #4a8ccc;
+            --bright-blue: #5ca8ff;
+            --dark-blue: #1a3a5f;
+            --navy-blue: #0f2542;
+            --accent-green: #36b37e;
+            --light-green: #4dd49a;
+            --dark-green: #2a8c63;
+            --accent-yellow: #ffcc00;
+            --light-yellow: #ffdb4d;
+            --gold: #e6b800;
+            --accent-orange: #ff8c42;
+            --light-orange: #ffa366;
+            --bg-color: #0f1a2a;
+            --light-bg: #1a2a3f;
+            --lighter-bg: #243b5a;
+            --card-bg: #1e2f47;
+            --text-color: #e8f1f5;
+            --light-text: #f0f7ff;
+            --muted-text: #a8c0d0;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-yellow);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-yellow);
+            margin-bottom: 10px;
+            font-family: "Bahnschrift", "Segoe UI", sans-serif;
+        }
+
+        h1 {
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--light-blue);
+            margin: 25px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-blue);
+        }
+
+        h3 {
+            color: var(--light-green);
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: var(--accent-yellow);
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--gold) 100%);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--accent-yellow);
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .lang-btn.active {
+            background-color: var(--accent-yellow);
+            color: var(--bg-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="pl">PL</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">EyeProtector</div>
+            <h1 data-translate="privacy-title">🛡️ EyeProtector — Polityka Prywatności</h1>
+            <p data-translate="privacy-last-update">Ostatnia aktualizacja: 2025</p>
+        </div>
+
+        <div class="content">
+            <p data-translate="privacy-intro-1">
+                Niniejsza Polityka Prywatności opisuje zasady gromadzenia, przetwarzania i ochrony danych użytkowników aplikacji EyeProtector.
+            </p>
+            
+            <p data-translate="privacy-intro-2">
+                Dokładamy wszelkich starań, aby chronić Twoją prywatność i zapewnić bezpieczeństwo danych. Aplikacja EyeProtector została zaprojektowana z myślą o minimalnym dostępie do danych użytkownika.
+            </p>
+
+            <h2 data-translate="privacy-data-collection-title">📊 Gromadzenie Danych</h2>
+            
+            <p data-translate="privacy-data-collection-1">
+                EyeProtector nie gromadzi, nie przetwarza ani nie przechowuje żadnych danych osobowych użytkowników. Aplikacja działa w pełni lokalnie na urządzeniu użytkownika. Wszystkie funkcje, w tym analiza odległości od ekranu, są realizowane wyłącznie na urządzeniu — bez przesyłania jakichkolwiek danych na zewnętrzne serwery.
+            </p>
+
+            <h2 data-translate="privacy-permissions-title">🎥 Uprawnienia Aplikacji</h2>
+            
+            <h3 data-translate="privacy-permission-camera">Dostęp do kamery</h3>
+            <p data-translate="privacy-permission-camera-desc">
+                Aplikacja wymaga dostępu do kamery wyłącznie w celu analizy odległości twarzy użytkownika od ekranu. Obraz z kamery jest przetwarzany wyłącznie lokalnie w czasie rzeczywistym i nie jest zapisywany, przesyłany ani udostępniany stronom trzecim.
+            </p>
+
+            <h3 data-translate="privacy-permission-storage">Dostęp do pamięci</h3>
+            <p data-translate="privacy-permission-storage-desc">
+                Aplikacja wymaga dostępu do pamięci urządzenia wyłącznie w celu zapisania ustawień konfiguracyjnych użytkownika. Żadne dane osobowe nie są zapisywane ani udostępniane.
+            </p>
+
+            <h2 data-translate="privacy-children-title">👶 Ochrona Dzieci</h2>
+            <p data-translate="privacy-children-1">
+                EyeProtector jest zaprojektowany z myślą o ochronie prywatności dzieci. Aplikacja nie gromadzi żadnych danych o użytkownikach, w tym danych dzieci korzystających z aplikacji.
+            </p>
+
+            <h2 data-translate="privacy-third-party-title">🚫 Usługi Trzecich Stron</h2>
+            <p data-translate="privacy-third-party-1">
+                Aplikacja nie korzysta z usług zewnętrznych analitycznych, reklamowych ani śledzących. Nie implementujemy żadnych narzędzi śledzących ani zewnętrznych SDK.
+            </p>
+
+            <h2 data-translate="privacy-contact-form-title">📩 Formularz Kontaktowy na Stronie</h2>
+            <p data-translate="privacy-contact-form-1">
+                Na stronie internetowej EyeProtector dostępny jest formularz kontaktowy, który umożliwia przesłanie wiadomości do twórcy aplikacji. Wiadomości te mogą zawierać dane osobowe (np. adres e-mail, imię), które są przekazywane dobrowolnie przez użytkownika. Dane te są wykorzystywane wyłącznie w celu odpowiedzi na zapytanie i nie są udostępniane osobom trzecim ani wykorzystywane w celach marketingowych. Formularz obsługiwany jest przez usługę SmartForms, która zapewnia bezpieczne przesyłanie wiadomości.
+            </p>
+
+            <h2 data-translate="privacy-changes-title">📝 Zmiany w Polityce Prywatności</h2>
+            <p data-translate="privacy-changes-1">
+                W przypadku wprowadzenia zmian w Polityce Prywatności, zostaną one opublikowane na tej stronie wraz z datą ostatniej aktualizacji.
+            </p>
+
+            <div class="contact-info">
+                <h3 data-translate="privacy-contact-title">Kontakt</h3>
+                <p data-translate="privacy-contact-desc">
+                    W przypadku pytań dotyczących Polityki Prywatności, prosimy o kontakt:
+                </p>
+                <p>Email: <a href="mailto:TapWiseStudio@gmail.com" style="color: var(--accent-yellow);">TapWiseStudio@gmail.com</a></p>
+            </div>
+
+            <a href="index.html" class="back-btn" data-translate="privacy-back-btn">Powrót do strony głównej</a>
+        </div>
+    </div>
+
+    <script>
+        // Tłumaczenia dla Polityki Prywatności
+        const privacyTranslations = {
+            pl: {
+                "privacy-title": "🛡️ EyeProtector — Polityka Prywatności",
+                "privacy-last-update": "Ostatnia aktualizacja: 2025",
+                "privacy-intro-1": "Niniejsza Polityka Prywatności opisuje zasady gromadzenia, przetwarzania i ochrony danych użytkowników aplikacji EyeProtector.",
+                "privacy-intro-2": "Dokładamy wszelkich starań, aby chronić Twoją prywatność i zapewnić bezpieczeństwo danych. Aplikacja EyeProtector została zaprojektowana z myślą o minimalnym dostępie do danych użytkownika.",
+                "privacy-data-collection-title": "📊 Gromadzenie Danych",
+                "privacy-data-collection-1": "EyeProtector nie gromadzi, nie przetwarza ani nie przechowuje żadnych danych osobowych użytkowników. Aplikacja działa w pełni lokalnie na urządzeniu użytkownika. Wszystkie funkcje, w tym analiza odległości od ekranu, są realizowane wyłącznie na urządzeniu — bez przesyłania jakichkolwiek danych na zewnętrzne serwery.",
+                "privacy-permissions-title": "🎥 Uprawnienia Aplikacji",
+                "privacy-permission-camera": "Dostęp do kamery",
+                "privacy-permission-camera-desc": "Aplikacja wymaga dostępu do kamery wyłącznie w celu analizy odległości twarzy użytkownika od ekranu. Obraz z kamery jest przetwarzany wyłącznie lokalnie w czasie rzeczywistym i nie jest zapisywany, przesyłany ani udostępniany stronom trzecim.",
+                "privacy-permission-storage": "Dostęp do pamięci",
+                "privacy-permission-storage-desc": "Aplikacja wymaga dostępu do pamięci urządzenia wyłącznie w celu zapisania ustawień konfiguracyjnych użytkownika. Żadne dane osobowe nie są zapisywane ani udostępniane.",
+                "privacy-children-title": "👶 Ochrona Dzieci",
+                "privacy-children-1": "EyeProtector jest zaprojektowany z myślą o ochronie prywatności dzieci. Aplikacja nie gromadzi żadnych danych o użytkownikach, w tym danych dzieci korzystających z aplikacji.",
+                "privacy-third-party-title": "🚫 Usługi Trzecich Stron",
+                "privacy-third-party-1": "Aplikacja nie korzysta z usług zewnętrznych analitycznych, reklamowych ani śledzących. Nie implementujemy żadnych narzędzi śledzących ani zewnętrznych SDK.",
+                "privacy-contact-form-title": "📩 Formularz Kontaktowy na Stronie",
+                "privacy-contact-form-1": "Na stronie internetowej EyeProtector dostępny jest formularz kontaktowy, który umożliwia przesłanie wiadomości do twórcy aplikacji. Wiadomości te mogą zawierać dane osobowe (np. adres e-mail, imię), które są przekazywane dobrowolnie przez użytkownika. Dane te są wykorzystywane wyłącznie w celu odpowiedzi na zapytanie i nie są udostępniane osobom trzecim ani wykorzystywane w celach marketingowych. Formularz obsługiwany jest przez usługę SmartForms, która zapewnia bezpieczne przesyłanie wiadomości.",
+                "privacy-changes-title": "📝 Zmiany w Polityce Prywatności",
+                "privacy-changes-1": "W przypadku wprowadzenia zmian w Polityce Prywatności, zostaną one opublikowane na tej stronie wraz z datą ostatniej aktualizacji.",
+                "privacy-contact-title": "Kontakt",
+                "privacy-contact-desc": "W przypadku pytań dotyczących Polityki Prywatności, prosimy o kontakt:",
+                "privacy-back-btn": "Powrót do strony głównej"
+            },
+            en: {
+                "privacy-title": "🛡️ EyeProtector — Privacy Policy",
+                "privacy-last-update": "Last updated: 2025",
+                "privacy-intro-1": "This Privacy Policy describes the rules for collecting, processing and protecting user data of the EyeProtector application.",
+                "privacy-intro-2": "We make every effort to protect your privacy and ensure data security. The EyeProtector application has been designed with minimal access to user data in mind.",
+                "privacy-data-collection-title": "📊 Data Collection",
+                "privacy-data-collection-1": "EyeProtector does not collect, process or store any personal user data. The application works fully locally on the user's device. All functions, including screen distance analysis, are performed exclusively on the device — without transmitting any data to external servers.",
+                "privacy-permissions-title": "🎥 Application Permissions",
+                "privacy-permission-camera": "Camera Access",
+                "privacy-permission-camera-desc": "The application requires camera access solely for the purpose of analyzing the distance of the user's face from the screen. The camera image is processed only locally in real time and is not saved, transmitted or shared with third parties.",
+                "privacy-permission-storage": "Storage Access",
+                "privacy-permission-storage-desc": "The application requires access to the device's memory solely for the purpose of saving user configuration settings. No personal data is saved or shared.",
+                "privacy-children-title": "👶 Children Protection",
+                "privacy-children-1": "EyeProtector is designed with children's privacy protection in mind. The application does not collect any data about users, including data of children using the application.",
+                "privacy-third-party-title": "🚫 Third Party Services",
+                "privacy-third-party-1": "The application does not use external analytical, advertising or tracking services. We do not implement any tracking tools or external SDKs.",
+                "privacy-contact-form-title": "📩 Contact Form on the Website",
+                "privacy-contact-form-1": "The EyeProtector website has a contact form that allows you to send a message to the application's creator. These messages may contain personal data (e.g. email address, name) that are provided voluntarily by the user. This data is used only to respond to the inquiry and is not shared with third parties or used for marketing purposes. The form is handled by the SmartForms service, which ensures secure message transmission.",
+                "privacy-changes-title": "📝 Changes to Privacy Policy",
+                "privacy-changes-1": "If changes are made to the Privacy Policy, they will be published on this page along with the date of the last update.",
+                "privacy-contact-title": "Contact",
+                "privacy-contact-desc": "If you have questions regarding the Privacy Policy, please contact:",
+                "privacy-back-btn": "Back to main page"
+            }
+        };
+
+        // Sprawdź zapisany język z localStorage lub ustaw domyślny
+        function getSavedLanguage() {
+            const savedLang = localStorage.getItem('eyeProtectorLanguage');
+            return savedLang || 'pl';
+        }
+
+        // Zapisz wybrany język
+        function saveLanguage(lang) {
+            localStorage.setItem('eyeProtectorLanguage', lang);
+        }
+
+        // Zastosuj tłumaczenia
+        function applyPrivacyTranslations(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (privacyTranslations[lang] && privacyTranslations[lang][key]) {
+                    element.innerHTML = privacyTranslations[lang][key];
+                }
+            });
+            
+            // Zaktualizuj język w HTML
+            document.documentElement.lang = lang;
+            
+            // Zaktualizuj tytuł strony
+            document.title = privacyTranslations[lang]['privacy-title'] + ' - EyeProtector';
+        }
+
+        // Inicjalizacja po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLang = getSavedLanguage();
+            
+            // Ustaw aktywny przycisk języka
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === currentLang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Zastosuj tłumaczenia
+            applyPrivacyTranslations(currentLang);
+            
+            // Obsługa przełączników języka
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const selectedLang = this.getAttribute('data-lang');
+                    
+                    // Zaktualizuj aktywne przyciski
+                    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Zapisz i zastosuj język
+                    saveLanguage(selectedLang);
+                    applyPrivacyTranslations(selectedLang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
