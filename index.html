@@ -6,7 +6,6 @@
     <title>EyeProtector - Protect Children's Eyes</title><link rel="icon" type="image/png" href="ikona_eyeprotector.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS pozostaje bez zmian */
         :root {
             --primary-blue: #2a5c8d;
             --light-blue: #4a8ccc;
@@ -62,7 +61,6 @@
             font-weight: 600;
         }
 
-        /* NAGŁÓWEK Z OBRAZKIEM - UKRYTY NA MOBILE */
         .header-container {
             width: 100%;
             background-color: var(--navy-blue);
@@ -79,7 +77,6 @@
             background: url('naglowek_strony_cieniowany_1600x300.png') center/cover no-repeat;
         }
 
-        /* MENU NAWIGACYJNE */
         nav {
             background-color: rgba(26, 42, 63, 0.95);
             padding: 15px 0;
@@ -163,7 +160,6 @@
             font-size: 1.5rem;
         }
 
-        /* Language switcher - DESKTOP */
         .language-switcher {
             position: absolute;
             top: 20px;
@@ -188,7 +184,6 @@
             color: var(--bg-color);
         }
 
-        /* Mobile language switcher - ukryty na desktop */
         .mobile-language-switcher {
             display: none;
         }
@@ -233,7 +228,6 @@
             color: var(--light-blue);
         }
 
-        /* Hero section */
         .hero {
             text-align: center;
             padding: 60px 0;
@@ -718,7 +712,6 @@
             font-weight: 600;
         }
 
-        /* Licznik odwiedzin */
         #visit-counter {
             position: fixed;
             bottom: 10px;
@@ -748,7 +741,6 @@
             }
         }
 
-        /* REDUKCJA ANIMACJI */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -758,7 +750,6 @@
             }
         }
 
-        /* RESPONSYWNOŚĆ */
         @media (max-width: 768px) {
             .header-container {
                 display: none;
@@ -798,12 +789,10 @@
                 display: block;
             }
 
-            /* Ukryj desktopowy przełącznik języków na mobile */
             .language-switcher {
                 display: none;
             }
 
-            /* Pokaż mobilny przełącznik języków */
             .mobile-language-switcher {
                 display: flex;
                 gap: 10px;
@@ -903,21 +892,16 @@
     </style>
 </head>
 <body>
-    <!-- Language switcher - DESKTOP -->
     <div class="language-switcher">
         <button class="lang-btn active" data-lang="pl">PL</button>
         <button class="lang-btn" data-lang="en">EN</button>
     </div>
 
-    <!-- Kontener nagłówka z tłem po bokach -->
     <div class="header-container">
-        <!-- Nagłówek z nowym obrazkiem (widoczny tylko na desktop) -->
         <div class="header-image">
-            <!-- BRAK NAPISÓW - tylko obrazek -->
         </div>
     </div>
 
-    <!-- Menu nawigacyjne -->
     <nav>
         <div class="container nav-container">
             <div class="logo">
@@ -935,7 +919,6 @@
                 <li><a href="#contact" data-translate="nav-contact">Kontakt</a></li>
             </ul>
             <div style="display: flex; align-items: center;">
-                <!-- Mobile language switcher - widoczny tylko na urządzeniach mobilnych -->
                 <div class="mobile-language-switcher">
                     <button class="mobile-lang-btn active" data-lang="pl">PL</button>
                     <button class="mobile-lang-btn" data-lang="en">EN</button>
@@ -947,7 +930,6 @@
         </div>
     </nav>
 
-    <!-- About App Section -->
     <section class="hero" id="about">
         <div class="container">
             <h1 class="app-name" data-translate="about-title">EyeProtector</h1>
@@ -963,7 +945,7 @@
             <a href="#download" class="btn btn-outline" data-translate="about-btn-download">Pobierz teraz</a>
         </div>
     </section>
-	    <!-- Inspiration Section -->
+
     <section id="inspiration">
         <div class="container">
             <h2 class="section-title" data-translate="inspiration-title">Inspiracja</h2>
@@ -1005,7 +987,6 @@
         </div>
     </section>
 
-    <!-- Health Risks Section -->
     <section class="threats" id="threats">
         <div class="container">
             <h2 class="section-title" data-translate="threats-title">Zagrożenia dla zdrowia</h2>
@@ -1049,7 +1030,8 @@
                 <p data-translate="threats-statistic"><em>"Dzieci w wieku 8-18 lat spędzają średnio ponad 7 godzin dziennie przed ekranami"</em> - American Academy of Pediatrics</p>
             </div>
         </div>
-    </section>    <!-- Tips for Parents Section -->
+    </section>
+
     <section id="tips">
         <div class="container">
             <h2 class="section-title" data-translate="tips-title">Co możesz zrobić jako rodzic</h2>
@@ -1125,7 +1107,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section id="features">
         <div class="container">
             <h2 class="section-title" data-translate="features-title">O aplikacji</h2>
@@ -1142,7 +1123,6 @@
         </div>
     </section>
 
-    <!-- Functions Section -->
     <section id="functions">
         <div class="container">
             <h2 class="section-title" data-translate="functions-title">Funkcje</h2>
@@ -1175,7 +1155,7 @@
             </div>
         </div>
     </section>
-	    <!-- Download Section -->
+
     <section class="download-section" id="download">
         <div class="container">
             <h2 class="section-title" data-translate="download-title">Pobierz EyeProtector</h2>
@@ -1196,7 +1176,6 @@
                     <h3 data-translate="download-direct-title">Bezpośrednio</h3>
                     <p data-translate="download-direct-desc">Pobierz plik APK</p>
 					<a href="https://github.com/tapwisestudio-code/tapwisestudio-code.github.io/releases/download/v1.0/eyeprotector1.0.apk" class="btn" download="EyeProtector_v1.0.apk" data-translate="download-direct-btn">Pobierz APK</a>
-                 
                 </div>
             </div>
             
@@ -1204,7 +1183,6 @@
         </div>
     </section>
 
-    <!-- Support Section -->
     <section class="support-section" id="support">
         <div class="container">
             <h2 class="section-title" data-translate="support-title">Wesprzyj projekt</h2>
@@ -1216,7 +1194,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
             <h2 class="section-title" data-translate="contact-title">Kontakt</h2>
@@ -1251,7 +1228,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1265,7 +1241,6 @@
         </div>
     </footer>
 
-    <!-- Visit Counter -->
     <div id="visit-counter">
         <span data-translate="visit-counter">Odwiedzin:</span> <span id="visit-count">0</span>
     </div>
@@ -1437,7 +1412,8 @@
             localStorage.setItem('eyeProtectorVisitCount', visitCount);
             document.getElementById('visit-count').textContent = visitCount;
         });
-		        // Language translations
+
+        // Language translations
         const translations = {
             pl: {
                 // Navigation
