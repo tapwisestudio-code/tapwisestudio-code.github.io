@@ -708,19 +708,6 @@
             font-weight: 600;
         }
 
-        #visit-counter {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.7rem;
-            color: var(--light-blue);
-            background-color: rgba(15, 26, 42, 0.8);
-            padding: 5px 10px;
-            border-radius: 10px;
-            z-index: 1000;
-            font-family: var(--font-family);
-        }
-
         @keyframes slideUp {
             to {
                 opacity: 1;
@@ -980,15 +967,13 @@
                     <p data-translate="inspiration-why-p9">To narzędzie, które ma realny wpływ na zdrowie przyszłych pokoleń.</p>
                     <p data-translate="inspiration-why-p10">EyeProtector powstał z frustracji — i z troski.</p>
                     
-                  <div class="inspiration-support">
-				<div class="inspiration-support" style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 20px;">
-					<img src="/postaw_mi_kawe_yellow.png" alt="Postaw mi kawę" style="width: 48px; height: 48px;">
-					<a href="https://buymeacoffee.com/gregwise" class="support-coffee-link" target="_blank" data-translate="inspiration-support-link" style="font-weight: bold; font-size: 1.1em; text-decoration: none; color: var(--accent-yellow);">
+                  <div class="inspiration-support" style="margin-left: 180px; display: flex; align-items: flex-start; gap: 12px; margin-top: 20px;">
+					<img src="/postaw_mi_kawe_yellow.png" alt="Postaw mi kawę" style="width: 48px; height: 48px; margin-top: 24px;">
+					<a href="https://buymeacoffee.com/gregwise" class="support-coffee-link" target="_blank" data-translate="inspiration-support-link" style="font-weight: normal; font-size: 	1em; text-decoration: none; color: var(--accent-yellow);">
 						Wspierasz? Kliknij
 					</a>
 				</div>
     </section>
-
     <section class="threats" id="threats">
         <div class="container">
             <h2 class="section-title" data-translate="threats-title">Zagrożenia dla zdrowia</h2>
@@ -1238,12 +1223,7 @@
             </div>
         </div>
     </footer>
-
-    <div id="visit-counter">
-        <span data-translate="visit-counter">Odwiedzin:</span> <span id="visit-count">0</span>
-    </div>
-
-    <script>
+	    <script>
         // Mobile menu
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
@@ -1554,8 +1534,6 @@
                 "footer-copyright": "© 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.",
                 "footer-privacy-btn": "Polityka Prywatności",
                 
-                // Visit counter
-                "visit-counter": "Odwiedzin:"
             },
             en: {
                 // Navigation
@@ -1698,8 +1676,6 @@
                 "footer-copyright": "© 2025 EyeProtector. All rights reserved. App created by an independent developer — no ads, no tracking, no compromises. Works locally. Protects children's eyesight. Respects privacy.",
                 "footer-privacy-btn": "Privacy Policy",
                 
-                // Visit counter
-                "visit-counter": "Visits:"
             }
         };
 
@@ -1742,7 +1718,6 @@
         });
     </script>
 	<img src="/postaw_mi_kawe_yellow.png" style="width: 100px; height: auto;">
-
 </body>
 </html>
 
