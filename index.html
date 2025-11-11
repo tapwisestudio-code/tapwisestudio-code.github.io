@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EyeProtector - Protect Children's Eyes</title>
-    <link rel="icon" type="image/png" href="ikona_eyeprotector.png">
-    <style>
-        /* 🎨 Styl licznika odwiedzin – osadzony w stopce, bez tła, z obramowaniem */
-        #global-visit-counter {
-			display: inline-block;
-			font-size: 0.67rem;
-			color: #4CD097; /* ✅ kolor cyfr */
-			border: 1px solid #4CD097; /* ✅ cienka ramka i kolor cyfr*/
-			border-radius: 10px; /* ✅ stopień zaokrąglenia rogów ramki */
-			padding: 6px 12px; /* ✅ WEWNĘTRZNY ODSTĘP */
-			margin-top: -50px; /* ✅ ZMIANA: zwiększamy ujemny margines, aby przesunąć wyżej */
-			font-family: "Segoe UI", Tahoma, sans-serif;
-			float: right; /* przesuwa licznik na prawą stronę stopki */
-			text-align: left; /* ✅ ZMIANA: cyfry czytane od lewej do prawej */
-			direction: ltr; /* ✅ ZMIANA: standardowy kierunek tekstu */
-			unicode-bidi: bidi-override; /* ✅ ZMIANA: zapewnia poprawne wyświetlanie */
-		  /*position: relative; /* dwie iostanie linijki pozwalają odsunąć licznik mocniej w porawo, po skasowaniu zewnętrznych znaczników (slash* i *slash) bedą aktywne*/
-			right: -20px; /* ✅ DODANE: przesuwa bardziej w prawo */*/
-		}	
+    <title>EyeProtector - Chroni Twoje Oczy Przed Zmęczeniem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0CRW35N8L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N0CRW35N8L');
+    </script>
 
+    <style>
+   
         :root {
             --primary-blue: #2a5c8d;
             --light-blue: #4a8ccc;
@@ -1250,12 +1243,6 @@
                 <div style="margin-top: 20px;">
                     <a href="privacy.html" class="btn btn-outline" style="margin: 10px;" data-translate="footer-privacy-btn">Polityka Prywatności</a>
                 </div>
-
-                <!-- 🔽 Licznik odwiedzin – osadzony w stopce, po prawej stronie -->
-                <!-- 🔽 ZASTĄP TYM -->
-<div id="global-visit-counter">
-    <span id="visit-count">0</span>
-</div>
             </div>
         </div>
     </footer>
@@ -1416,17 +1403,6 @@
                     }
                 });
             }
-
-            // Licznik odwiedzin
-            fetch('https://api.countapi.xyz/hit/eyeprotector.global/visits')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('visit-count').innerText = data.value;
-                })
-                .catch(error => {
-                    console.error('Błąd licznika odwiedzin:', error);
-                    document.getElementById('visit-count').innerText = '0';
-                });
 
             // Language translations
             const translations = {
