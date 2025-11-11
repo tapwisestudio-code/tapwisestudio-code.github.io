@@ -6,6 +6,24 @@
     <title>EyeProtector - Protect Children's Eyes</title>
     <link rel="icon" type="image/png" href="ikona_eyeprotector.png">
     <style>
+        /* 🎨 Styl licznika odwiedzin – osadzony w stopce, bez tła, z obramowaniem */
+        #global-visit-counter {
+			display: inline-block;
+			font-size: 0.67rem;
+			color: #4CD097; /* ✅ kolor cyfr */
+			border: 1px solid #4CD097; /* ✅ cienka ramka i kolor cyfr*/
+			border-radius: 10px; /* ✅ stopień zaokrąglenia rogów ramki */
+			padding: 6px 12px; /* ✅ WEWNĘTRZNY ODSTĘP */
+			margin-top: -50px; /* ✅ ZMIANA: zwiększamy ujemny margines, aby przesunąć wyżej */
+			font-family: "Segoe UI", Tahoma, sans-serif;
+			float: right; /* przesuwa licznik na prawą stronę stopki */
+			text-align: left; /* ✅ ZMIANA: cyfry czytane od lewej do prawej */
+			direction: ltr; /* ✅ ZMIANA: standardowy kierunek tekstu */
+			unicode-bidi: bidi-override; /* ✅ ZMIANA: zapewnia poprawne wyświetlanie */
+		  /*position: relative; /* dwie iostanie linijki pozwalają odsunąć licznik mocniej w porawo, po skasowaniu zewnętrznych znaczników (slash* i *slash) bedą aktywne*/
+			right: -20px; /* ✅ DODANE: przesuwa bardziej w prawo */*/
+		}	
+
         :root {
             --primary-blue: #2a5c8d;
             --light-blue: #4a8ccc;
@@ -836,6 +854,7 @@
             .inspiration-support {
                 text-align: center;
                 margin-top: 20px;
+                margin-left: 0 !important;
             }
 
             .support-coffee-link {
@@ -872,14 +891,14 @@
                 margin: 10px 0;
             }
         }
-		.coffee-icon {
-    transition: transform 0.3s ease;
-}
+        .coffee-icon {
+            transition: transform 0.3s ease;
+        }
 
-.coffee-btn:hover .coffee-icon,
-.support-coffee-link:hover .coffee-icon {
-    transform: scale(1.1);
-}
+        .coffee-btn:hover .coffee-icon,
+        .support-coffee-link:hover .coffee-icon {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -956,7 +975,7 @@
                 </div>
                 <div class="column">
                     <h3 class="section-subtitle" data-translate="inspiration-subtitle-why">Dlaczego EyeProtector?</h3>
-                    <p data-translate="inspiration-why-p1">&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą zbyt blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.</p><br></br>
+                    <p data-translate="inspiration-why-p1">&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą ztoo blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.</p><br></br>
                     <p data-translate="inspiration-why-p2">&emsp;&emsp;&emsp;To era cyfrowa która już zostanie — to codzienność, która wymaga działania.</p>
                     <p data-translate="inspiration-why-p3">To nie tylko kwestia wzroku. To także postawa. Zgarbiona sylwetka, pochylona głowa, brak ruchu — to prosta droga do bólów karku, napięć mięśniowych, zwyrodnień kręgosłupa, a nawet przewlekłych bólów głowy. Dzieci nie czują tego od razu nie wiedzą nawet kiedy już mają problem.</p>
                     <p data-translate="inspiration-why-p4">Ale ja — jako dorosły, który już to przeszedł — wiem, czym to grozi.</p>
@@ -966,15 +985,19 @@
                     <p data-translate="inspiration-why-p8">Działa pasywnie. Bez reklam. Bez rozpraszaczy. Rodzic konfiguruje. Dziecko korzysta. Nie diagnozuje. Nie leczy. Po prostu chroni. I uczy zdrowych nawyków – czysta profilaktyka.</p>
                     <p data-translate="inspiration-why-p9">To narzędzie, które ma realny wpływ na zdrowie przyszłych pokoleń.</p>
                     <p data-translate="inspiration-why-p10">EyeProtector powstał z frustracji — i z troski.</p>
-			<div class="inspiration-support" style="margin-left: 300px; margin-top: 60px;">
-					<a href="https://buymeacoffee.com/gregwise" target="_blank" style="display: inline-flex; align-items: flex-start; gap: 12px; text-decoration: none;">
-						<img src="/postaw_mi_kawe_yellow.png" alt="Postaw mi kawę" style="width: 48px; height: 48px; margin-top: 55px;">
-						<span style="font-weight: normal; font-size: 1em; margin-top: 60px; color: var(--accent-yellow);">
-							Wspierasz? Kliknij
-						</span>
-					</a>
-				</div>
+                    <div class="inspiration-support" style="margin-left: 300px; margin-top: 60px;">
+                        <a href="https://buymeacoffee.com/gregwise" target="_blank" style="display: inline-flex; align-items: flex-start; gap: 12px; text-decoration: none;">
+                            <img src="/postaw_mi_kawe_yellow.png" alt="Postaw mi kawę" style="width: 48px; height: 48px; margin-top: 55px;">
+                            <span style="font-weight: normal; font-size: 1em; margin-top: 60px; color: var(--accent-yellow);">
+                                Wspierasz? Kliknij
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="threats" id="threats">
         <div class="container">
             <h2 class="section-title" data-translate="threats-title">Zagrożenia dla zdrowia</h2>
@@ -1158,7 +1181,7 @@
                 <div class="download-option">
                     <h3 data-translate="download-direct-title">Bezpośrednio</h3>
                     <p data-translate="download-direct-desc">Pobierz plik APK</p>
-					<a href="https://github.com/tapwisestudio-code/tapwisestudio-code.github.io/releases/download/v1.0/eyeprotector1.0.apk" class="btn" download="EyeProtector_v1.0.apk" data-translate="download-direct-btn">Pobierz APK</a>
+                    <a href="https://github.com/tapwisestudio-code/tapwisestudio-code.github.io/releases/download/v1.0/eyeprotector1.0.apk" class="btn" download="EyeProtector_v1.0.apk" data-translate="download-direct-btn">Pobierz APK</a>
                 </div>
             </div>
             
@@ -1170,12 +1193,13 @@
         <div class="container">
             <h2 class="section-title" data-translate="support-title">Wesprzyj projekt</h2>
             <p class="support-text" data-translate="support-text">EyeProtector jest rozwijany niezależnie z misją ochrony wzroku dzieci. Twoje wsparcie pomaga w utrzymaniu i ulepszaniu aplikacji, utrzymując ją wolną od reklam i niepotrzebnych uprawnień.</p>
- <div style="text-align: center; margin-top: 20px;">
-  <a href="https://buymeacoffee.com/gregwise" class="coffee-link">
-    <img src="/postaw_mi_kawe_blue.png" alt="Postaw mi kawę" class="coffee-icon" style="width: 40px; height: auto; vertical-align: middle; margin-right: 10px;">
-    Postaw kawę
-  </a>
-</div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://buymeacoffee.com/gregwise" class="coffee-link">
+                    <img src="/postaw_mi_kawe_blue.png" alt="Postaw mi kawę" class="coffee-icon" style="width: 40px; height: auto; vertical-align: middle; margin-right: 10px;">
+                    Postaw kawę
+                </a>
+            </div>
+        </div>
     </section>
 
     <section class="contact-section" id="contact">
@@ -1216,15 +1240,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo" data-translate="footer-logo">EyeProtector</div>
-                <p class="footer-mission" data-translate="footer-mission">EyeProtector to niezależna aplikacja tworzona z myślą o realnych potrzebach rodziców i dzieci.<br>Nie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.</p>
-                <p data-translate="footer-copyright">© 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.</p>
+                <p class="footer-mission" data-translate="footer-mission">
+                    EyeProtector to niezależna aplikacja tworzona z myślą o realnych potrzebach rodziców i dzieci.<br>
+                    Nie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.
+                </p>
+                <p data-translate="footer-copyright">
+                    © 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.
+                </p>
                 <div style="margin-top: 20px;">
                     <a href="privacy.html" class="btn btn-outline" style="margin: 10px;" data-translate="footer-privacy-btn">Polityka Prywatności</a>
                 </div>
+
+                <!-- 🔽 Licznik odwiedzin – osadzony w stopce, po prawej stronie -->
+                <!-- 🔽 ZASTĄP TYM -->
+<div id="global-visit-counter">
+    <span id="visit-count">0</span>
+</div>
             </div>
         </div>
     </footer>
-	    <script>
+
+    <script>
         // Mobile menu
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
@@ -1382,344 +1418,334 @@
             }
 
             // Licznik odwiedzin
-            let visitCount = localStorage.getItem('eyeProtectorVisitCount');
-            if (!visitCount) {
-                visitCount = 1;
-            } else {
-                visitCount = parseInt(visitCount) + 1;
-            }
-            localStorage.setItem('eyeProtectorVisitCount', visitCount);
-            document.getElementById('visit-count').textContent = visitCount;
-        });
+            fetch('https://api.countapi.xyz/hit/eyeprotector.global/visits')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visit-count').innerText = data.value;
+                })
+                .catch(error => {
+                    console.error('Błąd licznika odwiedzin:', error);
+                    document.getElementById('visit-count').innerText = '0';
+                });
 
-        // Language translations
-        const translations = {
-            pl: {
-                // Navigation
-                "nav-about": "O aplikacji",
-                "nav-inspiration": "Inspiracja",
-                "nav-threats": "Zagrożenia",
-                "nav-tips": "Dla rodziców",
-                "nav-functions": "Funkcje",
-                "nav-download": "Pobierz",
-                "nav-support": "Wesprzyj",
-                "nav-contact": "Kontakt",
-                
-                // About section
-                "about-title": "EyeProtector",
-                "about-tagline": "Chroń wzrok dzieci w erze cyfrowej",
-                "about-mission": "Zadbaj o wzrok swojego dziecka zanim będzie za późno.<br>EyeProtector to więcej niż aplikacja — to codzienna troska o zdrowie.<br>Technologia nie musi szkodzić. Dzięki EyeProtector ekran może wspierać, a nie obciążać.<br>Pobierz i działaj. Nie czekaj na idealny moment — zrób pierwszy krok już teraz.<br>Proste rozwiązanie, realna pomoc.<br>EyeProtector działa w tle, ale jego wpływ jest widoczny każdego dnia.",
-                "about-btn-download": "Pobierz teraz",
-                
-                // Inspiration section
-                "inspiration-title": "Inspiracja",
-                "inspiration-subtitle-story": "Moja historia",
-                "inspiration-story-p1": "&emsp;&emsp;&emsp;Jestem ojcem, na którego barkach spoczywa wychowanie syna. To ja odpowiadam za jego zdrowie, nawyki, bezpieczeństwo.",
-                "inspiration-story-p2": "Nie czekałem, aż pojawią się objawy — pilnowałem go skutecznie. Ale ta skuteczność miała swoją cenę: ciągłe zerkanie, przerywanie pracy, odrywanie się od obowiązków domowych. To było irytujące.",
-                "inspiration-story-p3": "Miałem dość.",
-                "inspiration-story-p4": "&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem, człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.",
-                "inspiration-story-p5": "&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka.Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.",
-                "inspiration-story-p6": "Moment przełomowy?",
-                "inspiration-story-p7": "&emsp;&emsp;&emsp;Kiedy poszedłem do syna sprawdzić, czy zachowuje bezpieczną odległość. Mieliśmy krótką rozmowę, a ja… zapomniałem zmniejszyć moc palnika. Obiad się przypalił. Wtedy powiedziałem sobie: dość. Potrzebuję narzędzia, które będzie działać za mnie — cicho, skutecznie, bezpiecznie.",
-                "inspiration-story-p8": "&emsp;&emsp;&emsp;Tworzeniu pierwszej wersji towarzyszyła nadzieja, radość i przede wszystkim ulga. Dziś, gdy rozwijam kolejne funkcje, które diametralnie zwiększą możliwości aplikacji, czuję czystą radość twórczą.",
-                "inspiration-story-p9": "&emsp;&emsp;&emsp;Mój syn wie, że to on był inspiracją. Ma aplikację, używa jej świadomie i mówi, że „robi robotę\".",
-                "inspiration-story-p10": "Podstawowe funkcje EyeProtector zawsze będą dostępne za darmo. Profilaktyka i poprawa podstaw zdrowia powinny być dostępne dla każdego — bez opłat, bez kompromisów.",
-                "inspiration-subtitle-why": "Dlaczego EyeProtector?",
-                "inspiration-why-p1": "&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą zbyt blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.",
-                "inspiration-why-p2": "&emsp;&emsp;&emsp;To era cyfrowa która już zostanie — to codzienność, która wymaga działania.",
-                "inspiration-why-p3": "To nie tylko kwestia wzroku. To także postawa. Zgarbiona sylwetka, pochylona głowa, brak ruchu — to prosta droga do bólów karku, napięć mięśniowych, zwyrodnień kręgosłupa, a nawet przewlekłych bólów głowy. Dzieci nie czują tego od razu nie wiedzą nawet kiedy już mają problem.",
-                "inspiration-why-p4": "Ale ja — jako dorosły, który już to przeszedł — wiem, czym to grozi.",
-                "inspiration-why-p5": "&emsp;&emsp;&emsp;Najbardziej niepokojące są jednak skutki dla wzroku — bo część z nich jest nieodwracalna. Zbyt bliska odległość od ekranu i zbyt długi czas bez przerwy mogą prowadzić do postępującej krótkowzroczności, która utrwala się na całe życie. Mięśnie odpowiedzialne za ostre widzenie mogą się przeciążyć, a nawilżenie oka — zaburzyć. Dziecko nie powie, że widzi gorzej. Ale jego oczy już się męczą, już mają dość.",
-                "inspiration-why-p6": "&emsp;&emsp;&emsp;Potrzebowałem narzędzia. Nie kolejnej aplikacji z reklamami, rankingami i powiadomieniami. Tylko czegoś prostego, co po prostu działa. Moja aplikacja EyeProtector powstała po to, by chronić wzrok, by rodzic nie musiał co chwilę odrywać się od obowiązków i zajęć domowych, by pilnować dziecka.",
-                "inspiration-why-p7": "&emsp;&emsp;&emsp;To aplikacja, która pomaga chronić wzrok dzieci, młodzieży, ale też dorosłych podczas korzystania z ekranów.",
-                "inspiration-why-p8": "Działa pasywnie. Bez reklam. Bez rozpraszaczy. Rodzic konfiguruje. Dziecko korzysta. Nie diagnozuje. Nie leczy. Po prostu chroni. I uczy zdrowych nawyków – czysta profilaktyka.",
-                "inspiration-why-p9": "To narzędzie, które ma realny wpływ na zdrowie przyszłych pokoleń.",
-                "inspiration-why-p10": "EyeProtector powstał z frustracji — i z troski.",
-                "inspiration-support-link": "Wspierasz? Kliknij",
-                
-                // Threats section
-                "threats-title": "Zagrożenia dla zdrowia",
-                "threats-intro": "Nadmierna ekspozycja na ekrany może prowadzić do poważnych problemów ze wzrokiem i nie tylko. Oto najważniejsze zagrożenia:",
-                "threats-vision-title": "👁️ Zagrożenia dla wzroku",
-                "threats-vision-1": "<strong>Postępująca krótkowzroczność (miopia)</strong> – zbyt bliska odległość od ekranu przyspiesza rozwój wady, która może się utrwalić na całe życie",
-                "threats-vision-2": "<strong>Zaburzenia akomodacji</strong> – mięśnie oka odpowiedzialne za ostrość widzenia mogą się przeciążyć i „zablokować\"",
-                "threats-vision-3": "<strong>Cyfrowe zmęczenie wzroku (CVS)</strong> – objawia się pieczeniem, łzawieniem, zamazanym widzeniem i bólem oczu",
-                "threats-vision-4": "<strong>Zespół suchego oka</strong> – rzadsze mruganie prowadzi do wysychania filmu łzowego i podrażnień",
-                "threats-vision-5": "<strong>Zaburzenia widzenia obuocznego</strong> – trudności z koordynacją obu oczu, co może wpływać na koncentrację i czytanie",
-                "threats-vision-6": "<strong>Zaburzenia rytmu dobowego</strong> – światło niebieskie z bliskiej odległości może zakłócać sen i produkcję melatoniny",
-                "threats-neuro-title": "🧠 Zagrożenia neurologiczne i poznawcze",
-                "threats-neuro-1": "<strong>Bóle głowy i migreny</strong> – wynikające z napięcia mięśni oczu i karku oraz przeciążenia układu nerwowego",
-                "threats-neuro-2": "<strong>Trudności z koncentracją</strong> – przeciążony wzrok i zmęczenie mogą wpływać na zdolność skupienia uwagi",
-                "threats-posture-title": "🧍 Zagrożenia dla postawy i układu mięśniowo-szkieletowego",
-                "threats-posture-1": "<strong>Zgarbiona sylwetka</strong> – długotrwałe pochylanie się nad ekranem prowadzi do trwałych nawyków posturalnych",
-                "threats-posture-2": "<strong>Napięcia mięśni szyi i karku</strong> – tzw. „text neck\" to coraz częstszy problem u dzieci",
-                "threats-posture-3": "<strong>Zwyrodnienia kręgosłupa</strong> – długotrwałe przeciążenia mogą prowadzić do zmian strukturalnych w odcinku szyjnym i piersiowym",
-                "threats-posture-4": "<strong>Bóle pleców i ramion</strong> – wynikające z nieprawidłowej pozycji ciała podczas korzystania z urządzeń",
-                "threats-warning": "<strong>Wszystkie te skutki mogą się kumulować — i wiele z nich jest trudnych lub niemożliwych do odwrócenia. Dlatego tak ważna jest profilaktyka, zanim pojawią się pierwsze objawy.</strong>",
-                "threats-statistic": "<em>\"Dzieci w wieku 8-18 lat spędzają średnio ponad 7 godzin dziennie przed ekranami\"</em> - American Academy of Pediatrics",
-                
-                // Tips section
-                "tips-title": "Co możesz zrobić jako rodzic",
-                "tips-intro": "Oto praktyczne wskazówki, jak chronić wzrok dziecka - z aplikacją EyeProtector i bez niej:",
-                "tips-1-title": "🕒 Ogranicz czas przed ekranem",
-                "tips-1-1": "Dzieci 2–5 lat: maksymalnie 1 godzina dziennie, najlepiej w blokach po 15–20 minut.",
-                "tips-1-2": "Starsze dzieci: ustal jasne zasady — np. brak ekranów przy posiłkach, przed snem, w sypialni.",
-                "tips-1-3": "Włącz bajki na telewizorze zamiast tabletu — większy dystans = mniejsze obciążenie oczu.",
-                "tips-2-title": "📏 Zadbaj o odległość i pozycję",
-                "tips-2-1": "Ekran powinien być co najmniej 25cm od oczu dziecka.",
-                "tips-2-2": "Urządzenie ustaw poniżej linii wzroku, by nie napinać mięśni oka.",
-                "tips-2-3": "Unikaj korzystania z ekranów w ciemności — światło otoczenia powinno być zrównoważone.",
-                "tips-3-title": "⏳ Zasada 20-20-20",
-                "tips-3-1": "Co 20 minut, dziecko powinno spojrzeć na coś oddalonego o 20 stóp (6 metrów) przez 20 sekund.",
-                "tips-3-2": "Pomaga to rozluźnić mięśnie akomodacyjne i zapobiega cyfrowemu zmęczeniu wzroku.",
-                "tips-4-title": "🌳 Codziennie światło dzienne",
-                "tips-4-1": "Minimum 2 godziny dziennie na świeżym powietrzu — to najskuteczniejszy sposób na opóźnienie rozwoju krótkowzroczności.",
-                "tips-4-2": "Naturalne światło wspiera rozwój gałki ocznej i rytm dobowy.",
-                "tips-5-title": "🛡️ Zastosuj filtry światła niebieskiego",
-                "tips-5-1": "Włącz tryb nocny / ochrony oczu na urządzeniu.",
-                "tips-5-2": "Rozważ okulary z filtrum blue light — szczególnie przy dłuższej nauce zdalnej.",
-                "tips-6-title": "🧠 Ucz dziecko zdrowych nawyków",
-                "tips-6-1": "Tłumacz, dlaczego warto robić przerwy i patrzeć w dal.",
-                "tips-6-2": "Wspólnie ustalcie zasady — np. „tablet tylko po obiedzie i nie dłużej niż 30 minut\".",
-                "tips-7-title": "🧸 Zadbaj o alternatywy",
-                "tips-7-1": "Proponuj aktywności bez ekranów: zabawy ruchowe, planszówki, rysowanie, wspólne czytanie.",
-                "tips-7-2": "Im więcej różnorodnych bodźców, tym lepiej dla rozwoju wzroku i mózgu.",
-                
-                // Features section
-                "features-title": "O aplikacji",
-                "features-p1": "<span class=\"highlighted-text\">Inteligentne ograniczenia</span> - Dzięki inteligentnym ograniczeniom oraz systemowi łagodnych ale bardzo skutecznych powiadomień i przypomnień, skutecznie wspiera zdrowe nawyki — bez irytacji i przerywania brutalnie aktywności wykonywanej na ekranie.",
-                "features-p2": "<span class=\"highlighted-text\">Działanie profilaktyczne</span> - uczy, jak korzystać z technologii w sposób bezpieczny i świadomy, pomaga zapobiegać cyfrowemu zmęczeniu wzroku.",
-                "features-p3": "<span class=\"highlighted-text\">Skuteczna ochrona</span> - Chroni każdego dnia, bez stresu, nie krzyczy, nie przeszkadza, ale działa skutecznie. Pomaga budować dobre nawyki i zapobiega cyfrowemu zmęczeniu oczu.",
-                "features-p4": "<span class=\"highlighted-text\">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.",
-                "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
-                
-                // Functions section
-                "functions-title": "Funkcje",
-                "functions-intro": "Cały czas udoskonalam aplikację, pojawiają się nowe pomysły zwiększające funkcjonalność, komfort i wygodę zarówno rodzica jak i dziecka. Pracuję nad nowymi funkcjami kilka z nich przedstawiam niżej, a w głowie już czekają prawdziwe Game Changer!",
-                "functions-1-title": "Zasada 20-20-20",
-                "functions-1-desc": "Skąd nazwa? 20 minut – 20stóp (6metrów) - 20 sekund – aplikacja skutecznie będzie egzekwować tę formę korzystania z urządzenia.",
-                "functions-2-title": "Filtr niebieskiego światła",
-                "functions-2-desc": "To będzie rozbudowa już istniejącej funkcji o predefiniowane ustawienia, będą one filtrować niebieskie światło w zależności od preferencji i oświetlenia otoczenia.",
-                "functions-3-title": "Limit czasu",
-                "functions-3-desc": "W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzić nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny, dla dziecka,  tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.",
-                "functions-4-title": "Inteligentna drzemka",
-                "functions-4-desc": "Podstawowa funkcja - Każde wyłączenie ekranu zatrzymuje upływ czasu wyznaczonego do korzystania z urządzenia, ale będzie coś jeszcze ale to niespodzianka.",
-                
-                // Download section
-                "download-title": "Pobierz EyeProtector",
-                "download-intro": "Chroń wzrok swojego dziecka już teraz - pobierz aplikację EyeProtector",
-                "download-google-title": "Google Play",
-                "download-google-note": "Weryfikacja trwa",
-                "download-google-btn": "Dostępne wkrótce",
-                "download-direct-title": "Bezpośrednio",
-                "download-direct-desc": "Pobierz plik APK",
-                "download-direct-btn": "Pobierz APK",
-                "download-info": "Android 8.0 (Oreo) i wyższe | Rozmiar: ~5MB",
-                
-                // Support section
-                "support-title": "Wesprzyj projekt",
-                "support-text": "EyeProtector jest rozwijany niezależnie z misją ochrony wzroku dzieci. Twoje wsparcie pomaga w utrzymaniu i ulepszaniu aplikacji, utrzymując ją wolną od reklam i niepotrzebnych uprawnień.",
-                "support-btn": "Postaw mi kawę",
-                
-                // Contact section
-                "contact-title": "Kontakt",
-                "contact-subtitle": "Masz pytania sugestie lub coś nie działa? Odezwij się — odpowiadam osobiście!",
-                "contact-form-name": "Imię i nazwisko",
-                "contact-form-email": "Email",
-                "contact-form-message": "Wiadomość",
-                "contact-form-submit": "Wyślij wiadomość",
-                
-                // Footer
-                "footer-logo": "EyeProtector",
-                "footer-mission": "EyeProtector to niezależna aplikacja tworzona z myślą o realnych potrzebach rodziców i dzieci.<br>Nie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.",
-                "footer-copyright": "© 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.",
-                "footer-privacy-btn": "Polityka Prywatności",
-                
-            },
-            en: {
-                // Navigation
-                "nav-about": "About App",
-                "nav-inspiration": "Inspiration",
-                "nav-threats": "Health Risks",
-                "nav-tips": "For Parents",
-                "nav-functions": "Features",
-                "nav-download": "Download",
-                "nav-support": "Support",
-                "nav-contact": "Contact",
-                
-                // About section
-                "about-title": "EyeProtector",
-                "about-tagline": "Protect children's eyes in the digital age",
-                "about-mission": "Take care of your child's eyesight before it's too late.<br>EyeProtector is more than an app — it's daily care for health.<br>Technology doesn't have to harm. With EyeProtector, the screen can support, not burden.<br>Download and act. Don't wait for the perfect moment — take the first step now.<br>Simple solution, real help.<br>EyeProtector works in the background, but its impact is visible every day.",
-                "about-btn-download": "Download Now",
-                
-                // Inspiration section
-                "inspiration-title": "Inspiration",
-                "inspiration-subtitle-story": "My Story",
-                "inspiration-story-p1": "&emsp;&emsp;&emsp;I am a father responsible for raising my son. I am accountable for his health, habits, and safety.",
-                "inspiration-story-p2": "I didn't wait for symptoms to appear — I supervised him effectively. But this effectiveness came at a price: constant checking, interrupting work, breaking away from household duties. It was frustrating.",
-                "inspiration-story-p3": "I had enough.",
-                "inspiration-story-p4": "&emsp;&emsp;&emsp;I'm not a company. I don't have a team. I am a person who sees a problem and doesn't wait for someone else to solve it. Aware that technology is an integral part of modern life and it's worth teaching children healthy habits.",
-                "inspiration-story-p5": "&emsp;&emsp;&emsp;While searching for a solution, I tested several apps. None met my expectations. I already knew how it should work — effectively, calmly, without distractions and irritating the child. I analyzed my ideas, sat down at the computer, and started intensive work. With each test, new possibilities emerged — features that are planned, that will better protect eyesight and give parents peace of mind. Work on them continues.",
-                "inspiration-story-p6": "The breakthrough moment?",
-                "inspiration-story-p7": "&emsp;&emsp;&emsp;When I went to check if my son was maintaining a safe distance. We had a short conversation, and I... forgot to reduce the stove power. The dinner burned. That's when I told myself: enough. I need a tool that will work for me — quietly, effectively, safely.",
-                "inspiration-story-p8": "&emsp;&emsp;&emsp;Creating the first version was accompanied by hope, joy, and above all, relief. Today, as I develop further features that will dramatically increase the app's capabilities, I feel pure creative joy.",
-                "inspiration-story-p9": "&emsp;&emsp;&emsp;My son knows he was the inspiration. He has the app, uses it consciously, and says it 'does the job'.",
-                "inspiration-story-p10": "Basic EyeProtector features will always be available for free. Prevention and improving basic health should be available to everyone — without fees, without compromises.",
-                "inspiration-subtitle-why": "Why EyeProtector?",
-                "inspiration-why-p1": "&emsp;&emsp;&emsp;I observed how my son and friends' children spend time with their phones — almost all hunched over, with faces too close to the screen, glued to games and videos. The screen was too close to their eyes, bodies tense, concentration completely absorbed. I realized this isn't a temporary problem.",
-                "inspiration-why-p2": "&emsp;&emsp;&emsp;This is the digital era that's here to stay — it's everyday reality that requires action.",
-                "inspiration-why-p3": "It's not just about eyesight. It's also about posture. Hunched posture, tilted head, lack of movement — this is a direct path to neck pain, muscle tension, spinal degeneration, and even chronic headaches. Children don't feel it immediately and don't even know when they already have a problem.",
-                "inspiration-why-p4": "But I — as an adult who has already been through this — know what it leads to.",
-                "inspiration-why-p5": "&emsp;&emsp;&emsp;Most concerning, however, are the effects on eyesight — because some of them are irreversible. Too close screen distance and too long uninterrupted time can lead to progressive myopia that becomes permanent for life. Muscles responsible for sharp vision can become overstrained, and eye lubrication can be disrupted. A child won't say they see worse. But their eyes are already tired, already had enough.",
-                "inspiration-why-p6": "&emsp;&emsp;&emsp;I needed a tool. Not another app with ads, rankings, and notifications. Just something simple that simply works. My EyeProtector app was created to protect eyesight, so parents don't have to constantly interrupt their duties and household chores to supervise their child.",
-                "inspiration-why-p7": "&emsp;&emsp;&emsp;This is an app that helps protect the eyesight of children, teenagers, but also adults while using screens.",
-                "inspiration-why-p8": "It works passively. Without ads. Without distractions. Parents configure. Children use. It doesn't diagnose. It doesn't treat. It simply protects. And teaches healthy habits – pure prevention.",
-                "inspiration-why-p9": "This is a tool that has a real impact on the health of future generations.",
-                "inspiration-why-p10": "EyeProtector was born from frustration — and from care.",
-                "inspiration-support-link": "Support? Click here",
-                
-                // Threats section
-                "threats-title": "Health Risks",
-                "threats-intro": "Excessive screen exposure can lead to serious vision problems and more. Here are the most important threats:",
-                "threats-vision-title": "👁️ Vision Threats",
-                "threats-vision-1": "<strong>Progressive myopia</strong> – too close screen distance accelerates the development of this vision defect, which can become permanent for life",
-                "threats-vision-2": "<strong>Accommodation disorders</strong> – eye muscles responsible for focus can become overstrained and 'lock up'",
-                "threats-vision-3": "<strong>Digital eye strain (CVS)</strong> – manifests as burning, tearing, blurred vision and eye pain",
-                "threats-vision-4": "<strong>Dry eye syndrome</strong> – reduced blinking leads to tear film drying and irritation",
-                "threats-vision-5": "<strong>Binocular vision disorders</strong> – difficulties coordinating both eyes, which can affect concentration and reading",
-                "threats-vision-6": "<strong>Circadian rhythm disorders</strong> – blue light from close distance can disrupt sleep and melatonin production",
-                "threats-neuro-title": "🧠 Neurological and Cognitive Threats",
-                "threats-neuro-1": "<strong>Headaches and migraines</strong> – resulting from eye and neck muscle tension and nervous system overload",
-                "threats-neuro-2": "<strong>Concentration difficulties</strong> – strained vision and fatigue can affect the ability to focus attention",
-                "threats-posture-title": "🧍 Posture and Musculoskeletal Threats",
-                "threats-posture-1": "<strong>Hunched posture</strong> – prolonged leaning over screens leads to permanent postural habits",
-                "threats-posture-2": "<strong>Neck and shoulder muscle tension</strong> – so-called 'text neck' is an increasingly common problem in children",
-                "threats-posture-3": "<strong>Spinal degeneration</strong> – long-term overload can lead to structural changes in the cervical and thoracic spine",
-                "threats-posture-4": "<strong>Back and shoulder pain</strong> – resulting from improper body position while using devices",
-                "threats-warning": "<strong>All these effects can accumulate — and many of them are difficult or impossible to reverse. That's why prevention is so important before the first symptoms appear.</strong>",
-                "threats-statistic": "<em>\"Children aged 8-18 spend an average of over 7 hours daily in front of screens\"</em> - American Academy of Pediatrics",
-                
-                // Tips section
-                "tips-title": "What You Can Do as a Parent",
-                "tips-intro": "Here are practical tips on how to protect your child's eyesight - with EyeProtector app and without it:",
-                "tips-1-title": "🕒 Limit Screen Time",
-                "tips-1-1": "Children 2-5 years: maximum 1 hour daily, preferably in 15-20 minute blocks.",
-                "tips-1-2": "Older children: establish clear rules — e.g., no screens during meals, before bed, in the bedroom.",
-                "tips-1-3": "Play cartoons on TV instead of tablet — greater distance = less eye strain.",
-                "tips-2-title": "📏 Maintain Distance and Position",
-                "tips-2-1": "Screen should be at least 25cm from child's eyes.",
-                "tips-2-2": "Position device below eye level to avoid straining eye muscles.",
-                "tips-2-3": "Avoid using screens in darkness — ambient light should be balanced.",
-                "tips-3-title": "⏳ 20-20-20 Rule",
-                "tips-3-1": "Every 20 minutes, child should look at something 20 feet (6 meters) away for 20 seconds.",
-                "tips-3-2": "This helps relax accommodation muscles and prevents digital eye strain.",
-                "tips-4-title": "🌳 Daily Daylight",
-                "tips-4-1": "Minimum 2 hours daily outdoors — this is the most effective way to delay myopia development.",
-                "tips-4-2": "Natural light supports eyeball development and circadian rhythm.",
-                "tips-5-title": "🛡️ Use Blue Light Filters",
-                "tips-5-1": "Enable night mode/eye protection on the device.",
-                "tips-5-2": "Consider blue light filter glasses — especially during extended remote learning.",
-                "tips-6-title": "🧠 Teach Healthy Habits",
-                "tips-6-1": "Explain why it's worth taking breaks and looking into the distance.",
-                "tips-6-2": "Establish rules together — e.g., 'tablet only after lunch and no longer than 30 minutes'.",
-                "tips-7-title": "🧸 Provide Alternatives",
-                "tips-7-1": "Offer screen-free activities: physical play, board games, drawing, shared reading.",
-                "tips-7-2": "The more diverse stimuli, the better for vision and brain development.",
-                
-                // Features section
-                "features-title": "About the App",
-                "features-p1": "<span class=\"highlighted-text\">Smart limitations</span> - Thanks to intelligent limitations and a system of gentle but very effective notifications and reminders, it effectively supports healthy habits — without irritation and without brutally interrupting screen activities.",
-                "features-p2": "<span class=\"highlighted-text\">Preventive action</span> - teaches how to use technology safely and consciously, helps prevent digital eye strain.",
-                "features-p3": "<span class=\"highlighted-text\">Effective protection</span> - Protects every day, without stress, doesn't shout, doesn't disturb, but works effectively. Helps build good habits and prevents digital eye fatigue.",
-                "features-p4": "<span class=\"highlighted-text\">EyeProtector comprehensive</span> solution designed specifically for eye protection during digital device use, not only for children but also adults.",
-                "features-p5": "To effectively protect children's eyesight while using mobile devices, EyeProtector uses advanced mechanisms, doesn't activate when the screen is too close to hands or objects, - periodically checks symmetry and presence of pupils. Thanks to analyzing their arrangement, the app can precisely estimate face distance from the screen, regardless of phone model or sensor availability.<br><br>The app works in the background — discreetly, effectively and without irritation. When it detects the screen is too close to eyes, it informs with a gentle sound, the screen automatically dims to the level set by the parent and activates touch lock. This effectively prevents further use until the phone is moved to the previously calibrated safe distance.<br><br>The entire image processing happens locally, without sending data to the cloud.",
-                
-                // Functions section
-                "functions-title": "Features",
-                "functions-intro": "I'm constantly improving the app, new ideas emerge that increase functionality, comfort and convenience for both parents and children. I'm working on new features, some of which I present below, and in my head there are already real Game Changers waiting!",
-                "functions-1-title": "20-20-20 Rule",
-                "functions-1-desc": "Where does the name come from? 20 minutes – 20 feet (6 meters) - 20 seconds – the app will effectively enforce this usage pattern.",
-                "functions-2-title": "Blue Light Filter",
-                "functions-2-desc": "This will be an expansion of the existing feature with predefined settings that will filter blue light depending on preferences and ambient lighting.",
-                "functions-3-title": "Time Limit",
-                "functions-3-desc": "In the app, it will be possible to set usage time, after which the child won't be able to use the phone until the parent enters a PIN. The entire device lock procedure will be intelligent and gentle for the child, so the child isn't suddenly torn away from screen activity.",
-                "functions-4-title": "Smart Nap",
-                "functions-4-desc": "Basic feature - Every screen turn-off stops the elapsed time allocated for device use, but there will be something more, but that's a surprise.",
-                
-                // Download section
-                "download-title": "Download EyeProtector",
-                "download-intro": "Protect your child's eyesight now - download EyeProtector app",
-                "download-google-title": "Google Play",
-                "download-google-note": "Verification in progress",
-                "download-google-btn": "Coming Soon",
-                "download-direct-title": "Direct Download",
-                "download-direct-desc": "Download APK file",
-                "download-direct-btn": "Download APK",
-                "download-info": "Android 8.0 (Oreo) and higher | Size: ~5MB",
-                
-                // Support section
-                "support-title": "Support the Project",
-                "support-text": "EyeProtector is independently developed with the mission of protecting children's eyesight. Your support helps maintain and improve the app, keeping it free from ads and unnecessary permissions.",
-                "support-btn": "Buy me a coffee",
-                
-                // Contact section
-                "contact-title": "Contact",
-                "contact-subtitle": "Have questions, suggestions, or something not working? Reach out — I respond personally!",
-                "contact-form-name": "Name and surname",
-                "contact-form-email": "Email",
-                "contact-form-message": "Message",
-                "contact-form-submit": "Send message",
-                
-                // Footer
-                "footer-logo": "EyeProtector",
-                "footer-mission": "EyeProtector is an independent app created with real parents' and children's needs in mind.<br>I'm not an institution. I'm a person who doesn't wait but acts.",
-                "footer-copyright": "© 2025 EyeProtector. All rights reserved. App created by an independent developer — no ads, no tracking, no compromises. Works locally. Protects children's eyesight. Respects privacy.",
-                "footer-privacy-btn": "Privacy Policy",
-                
-            }
-        };
-
-        // Function to apply language
-        function applyLanguage(lang) {
-            // Update all elements with data-translate attribute
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang] && translations[lang][key]) {
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.placeholder = translations[lang][key];
-                    } else {
-                        element.innerHTML = translations[lang][key];
-                    }
+            // Language translations
+            const translations = {
+                pl: {
+                    // Navigation
+                    "nav-about": "O aplikacji",
+                    "nav-inspiration": "Inspiracja",
+                    "nav-threats": "Zagrożenia",
+                    "nav-tips": "Dla rodziców",
+                    "nav-functions": "Funkcje",
+                    "nav-download": "Pobierz",
+                    "nav-support": "Wesprzyj",
+                    "nav-contact": "Kontakt",
+                    
+                    // About section
+                    "about-title": "EyeProtector",
+                    "about-tagline": "Chroń wzrok dzieci w erze cyfrowej",
+                    "about-mission": "Zadbaj o wzrok swojego dziecka zanim będzie za późno.<br>EyeProtector to więcej niż aplikacja — to codzienna troska o zdrowie.<br>Technologia nie musi szkodzić. Dzięki EyeProtector ekran może wspierać, a nie obciążać.<br>Pobierz i działaj. Nie czekaj na idealny moment — zrób pierwszy krok już teraz.<br>Proste rozwiązanie, realna pomoc.<br>EyeProtector działa w tle, ale jego wpływ jest widoczny każdego dnia.",
+                    "about-btn-download": "Pobierz teraz",
+                    
+                    // Inspiration section
+                    "inspiration-title": "Inspiracja",
+                    "inspiration-subtitle-story": "Moja historia",
+                    "inspiration-story-p1": "&emsp;&emsp;&emsp;Jestem ojcem, na którego barkach spoczywa wychowanie syna. To ja odpowiadam za jego zdrowie, nawyki, bezpieczeństwo.",
+                    "inspiration-story-p2": "Nie czekałem, aż pojawią się objawy — pilnowałem go skutecznie. Ale ta skuteczność miała swoją cenę: ciągłe zerkanie, przerywanie pracy, odrywanie się od obowiązków domowych. To było irytujące.",
+                    "inspiration-story-p3": "Miałem dość.",
+                    "inspiration-story-p4": "&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem, człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.",
+                    "inspiration-story-p5": "&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka.Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.",
+                    "inspiration-story-p6": "Moment przełomowy?",
+                    "inspiration-story-p7": "&emsp;&emsp;&emsp;Kiedy poszedłem do syna sprawdzić, czy zachowuje bezpieczną odległość. Mieliśmy krótką rozmowę, a ja… zapomniałem zmniejszyć moc palnika. Obiad się przypalił. Wtedy powiedziałem sobie: dość. Potrzebuję narzędzia, które będzie działać za mnie — cicho, skutecznie, bezpiecznie.",
+                    "inspiration-story-p8": "&emsp;&emsp;&emsp;Tworzeniu pierwszej wersji towarzyszyła nadzieja, radość i przede wszystkim ulga. Dziś, gdy rozwijam kolejne funkcje, które diametralnie zwiększą możliwości aplikacji, czuję czystą radość twórczą.",
+                    "inspiration-story-p9": "&emsp;&emsp;&emsp;Mój syn wie, że to on był inspiracją. Ma aplikację, używa jej świadomie i mówi, że „robi robotę\".",
+                    "inspiration-story-p10": "Podstawowe funkcje EyeProtector zawsze będą dostępne za darmo. Profilaktyka i poprawa podstaw zdrowia powinny być dostępne dla każdego — bez opłat, bez kompromisów.",
+                    "inspiration-subtitle-why": "Dlaczego EyeProtector?",
+                    "inspiration-why-p1": "&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą ztoo blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.",
+                    "inspiration-why-p2": "&emsp;&emsp;&emsp;To era cyfrowa która już zostanie — to codzienność, która wymaga działania.",
+                    "inspiration-why-p3": "To nie tylko kwestia wzroku. To także postawa. Zgarbiona sylwetka, pochylona głowa, brak ruchu — to prosta droga do bólów karku, napięć mięśniowych, zwyrodnień kręgosłupa, a nawet przewlekłych bólów głowy. Dzieci nie czują tego od razu nie wiedzą nawet kiedy już mają problem.",
+                    "inspiration-why-p4": "Ale ja — jako dorosły, który już to przeszedł — wiem, czym to grozi.",
+                    "inspiration-why-p5": "&emsp;&emsp;&emsp;Najbardziej niepokojące są jednak skutki dla wzroku — bo część z nich jest nieodwracalna. Zbyt bliska odległość od ekranu i zbyt długi czas bez przerwy mogą prowadzić do postępującej krótkowzroczności, która utrwala się na całe życie. Mięśnie odpowiedzialne za ostre widzenie mogą się przeciążyć, a nawilżenie oka — zaburzyć. Dziecko nie powie, że widzi gorzej. Ale jego oczy już się męczą, już mają dość.",
+                    "inspiration-why-p6": "&emsp;&emsp;&emsp;Potrzebowałem narzędzia. Nie kolejnej aplikacji z reklamami, rankingami i powiadomieniami. Tylko czegoś prostego, co po prostu działa. Moja aplikacja EyeProtector powstała po to, by chronić wzrok, by rodzic nie musiał co chwilę odrywać się od obowiązków i zajęć domowych, by pilnować dziecka.",
+                    "inspiration-why-p7": "&emsp;&emsp;&emsp;To aplikacja, która pomaga chronić wzrok dzieci, młodzieży, ale też dorosłych podczas korzystania z ekranów.",
+                    "inspiration-why-p8": "Działa pasywnie. Bez reklam. Bez rozpraszaczy. Rodzic konfiguruje. Dziecko korzysta. Nie diagnozuje. Nie leczy. Po prostu chroni. I uczy zdrowych nawyków – czysta profilaktyka.",
+                    "inspiration-why-p9": "To narzędzie, które ma realny wpływ na zdrowie przyszłych pokoleń.",
+                    "inspiration-why-p10": "EyeProtector powstał z frustracji — i z troski.",
+                    "inspiration-support-link": "Wspierasz? Kliknij",
+                    
+                    // Threats section
+                    "threats-title": "Zagrożenia dla zdrowia",
+                    "threats-intro": "Nadmierna ekspozycja na ekrany może prowadzić do poważnych problemów ze wzrokiem i nie tylko. Oto najważniejsze zagrożenia:",
+                    "threats-vision-title": "👁️ Zagrożenia dla wzroku",
+                    "threats-vision-1": "<strong>Postępująca krótkowzroczność (miopia)</strong> – zbyt bliska odległość od ekranu przyspiesza rozwój wady, która może się utrwalić na całe życie",
+                    "threats-vision-2": "<strong>Zaburzenia akomodacji</strong> – mięśnie oka odpowiedzialne za ostrość widzenia mogą się przeciążyć i „zablokować\"",
+                    "threats-vision-3": "<strong>Cyfrowe zmęczenie wzroku (CVS)</strong> – objawia się pieczeniem, łzawieniem, zamazanym widzeniem i bólem oczu",
+                    "threats-vision-4": "<strong>Zespół suchego oka</strong> – rzadsze mruganie prowadzi do wysychania filmu łzowego i podrażnień",
+                    "threats-vision-5": "<strong>Zaburzenia widzenia obuocznego</strong> – trudności z koordynacją obu oczu, co może wpływać na koncentrację i czytanie",
+                    "threats-vision-6": "<strong>Zaburzenia rytmu dobowego</strong> – światło niebieskie z bliskiej odległości może zakłócać sen i produkcję melatoniny",
+                    "threats-neuro-title": "🧠 Zagrożenia neurologiczne i poznawcze",
+                    "threats-neuro-1": "<strong>Bóle głowy i migreny</strong> – wynikające z napięcia mięśni oczu i karku oraz przeciążenia układu nerwowego",
+                    "threats-neuro-2": "<strong>Trudności z koncentracją</strong> – przeciążony wzrok i zmęczenie mogą wpływać na zdolność skupienia uwagi",
+                    "threats-posture-title": "🧍 Zagrożenia dla postawy i układu mięśniowo-szkieletowego",
+                    "threats-posture-1": "<strong>Zgarbiona sylwetka</strong> – długotrwałe pochylanie się nad ekranem prowadzi do trwałych nawyków posturalnych",
+                    "threats-posture-2": "<strong>Napięcia mięśni szyi i karku</strong> – tzw. „text neck\" to coraz częstszy problem u dzieci",
+                    "threats-posture-3": "<strong>Zwyrodnienia kręgosłupa</strong> – długotrwałe przeciążenia mogą prowadzić do zmian strukturalnych w odcinku szyjnym i piersiowym",
+                    "threats-posture-4": "<strong>Bóle pleców i ramion</strong> – wynikające z nieprawidłowej pozycji ciała podczas korzystania z urządzeń",
+                    "threats-warning": "<strong>Wszystkie te skutki mogą się kumulować — i wiele z nich jest trudnych lub niemożliwych do odwrócenia. Dlatego tak ważna jest profilaktyka, zanim pojawią się pierwsze objawy.</strong>",
+                    "threats-statistic": "<em>\"Dzieci w wieku 8-18 lat spędzają średnio ponad 7 godzin dziennie przed ekranami\"</em> - American Academy of Pediatrics",
+                    
+                    // Tips section
+                    "tips-title": "Co możesz zrobić jako rodzic",
+                    "tips-intro": "Oto praktyczne wskazówki, jak chronić wzrok dziecka - z aplikacją EyeProtector i bez niej:",
+                    "tips-1-title": "🕒 Ogranicz czas przed ekranem",
+                    "tips-1-1": "Dzieci 2–5 lat: maksymalnie 1 godzina dziennie, najlepiej w blokach po 15–20 minut.",
+                    "tips-1-2": "Starsze dzieci: ustal jasne zasady — np. brak ekranów przy posiłkach, przed snem, w sypialni.",
+                    "tips-1-3": "Włącz bajki na telewizorze zamiast tabletu — większy dystans = mniejsze obciążenie oczu.",
+                    "tips-2-title": "📏 Zadbaj o odległość i pozycję",
+                    "tips-2-1": "Ekran powinien być co najmniej 25cm od oczu dziecka.",
+                    "tips-2-2": "Urządzenie ustaw poniżej linii wzroku, by nie napinać mięśni oka.",
+                    "tips-2-3": "Unikaj korzystania z ekranów w ciemności — światło otoczenia powinno być zrównoważone.",
+                    "tips-3-title": "⏳ Zasada 20-20-20",
+                    "tips-3-1": "Co 20 minut, dziecko powinno spojrzeć na coś oddalonego o 20 stóp (6 metrów) przez 20 sekund.",
+                    "tips-3-2": "Pomaga to rozluźnić mięśnie akomodacyjne i zapobiega cyfrowemu zmęczeniu wzroku.",
+                    "tips-4-title": "🌳 Codziennie światło dzienne",
+                    "tips-4-1": "Minimum 2 godziny dziennie na świeżym powietrzu — to najskuteczniejszy sposób na opóźnienie rozwoju krótkowzroczności.",
+                    "tips-4-2": "Naturalne światło wspiera rozwój gałki ocznej i rytm dobowy.",
+                    "tips-5-title": "🛡️ Zastosuj filtry światła niebieskiego",
+                    "tips-5-1": "Włącz tryb nocny / ochrony oczu na urządzeniu.",
+                    "tips-5-2": "Rozważ okulary z filtrum blue light — szczególnie przy dłuższej nauce zdalnej.",
+                    "tips-6-title": "🧠 Ucz dziecko zdrowych nawyków",
+                    "tips-6-1": "Tłumacz, dlaczego warto robić przerwy i patrzeć w dal.",
+                    "tips-6-2": "Wspólnie ustalcie zasady — np. „tablet tylko po obiedzie i nie dłużej niż 30 minut\".",
+                    "tips-7-title": "🧸 Zadbaj o alternatywy",
+                    "tips-7-1": "Proponuj aktywności bez ekranów: zabawy ruchowe, planszówki, rysowanie, wspólne czytanie.",
+                    "tips-7-2": "Im więcej różnorodnych bodźców, tym lepiej dla rozwoju wzroku i mózgu.",
+                    
+                    // Features section
+                    "features-title": "O aplikacji",
+                    "features-p1": "<span class=\"highlighted-text\">Inteligentne ograniczenia</span> - Dzięki inteligentnym ograniczeniom oraz systemowi łagodnych ale bardzo skutecznych powiadomień i przypomnień, skutecznie wspiera zdrowe nawyki — bez irytacji i przerywania brutalnie aktywności wykonywanej na ekranie.",
+                    "features-p2": "<span class=\"highlighted-text\">Działanie profilaktyczne</span> - uczy, jak korzystać z technologii w sposób bezpieczny i świadomy, pomaga zapobiegać cyfrowemu zmęczeniu wzroku.",
+                    "features-p3": "<span class=\"highlighted-text\">Skuteczna ochrona</span> - Chroni każdego dnia, bez stresu, nie krzyczy, nie przeszkadza, ale działa skutecznie. Pomaga budować dobre nawyki i zapobiega cyfrowemu zmęczeniu oczu.",
+                    "features-p4": "<span class=\"highlighted-text\">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.",
+                    "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
+                    
+                    // Functions section
+                    "functions-title": "Funkcje",
+                    "functions-intro": "Cały czas udoskonalam aplikację, pojawiają się nowe pomysły zwiększające funkcjonalność, komfort i wygodę zarówno rodzica jak i dziecka. Pracuję nad nowymi funkcjami kilka z nich przedstawiam niżej, a w głowie już czekają prawdziwe Game Changer!",
+                    "functions-1-title": "Zasada 20-20-20",
+                    "functions-1-desc": "Skąd nazwa? 20 minut – 20stóp (6metrów) - 20 sekund – aplikacja skutecznie będzie egzekwować tę formę korzystania z urządzenia.",
+                    "functions-2-title": "Filtr niebieskiego światła",
+                    "functions-2-desc": "To będzie rozbudowa już istniejącej funkcji o predefiniowane ustawienia, będą one filtrować niebieskie światło w zależności od preferencji i oświetlenia otoczenia.",
+                    "functions-3-title": "Limit czasu",
+                    "functions-3-desc": "W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzić nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny, dla dziecka,  tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.",
+                    "functions-4-title": "Inteligentna drzemka",
+                    "functions-4-desc": "Podstawowa funkcja - Każde wyłączenie ekranu zatrzymuje upływ czasu wyznaczonego do korzystania z urządzenia, ale będzie coś jeszcze ale to niespodzianka.",
+                    
+                    // Download section
+                    "download-title": "Pobierz EyeProtector",
+                    "download-intro": "Chroń wzrok swojego dziecka już teraz - pobierz aplikację EyeProtector",
+                    "download-google-title": "Google Play",
+                    "download-google-note": "Weryfikacja trwa",
+                    "download-google-btn": "Dostępne wkrótce",
+                    "download-direct-title": "Bezpośrednio",
+                    "download-direct-desc": "Pobierz plik APK",
+                    "download-direct-btn": "Pobierz APK",
+                    "download-info": "Android 8.0 (Oreo) i wyższe | Rozmiar: ~5MB",
+                    
+                    // Support section
+                    "support-title": "Wesprzyj projekt",
+                    "support-text": "EyeProtector jest rozwijany niezależnie z misją ochrony wzroku dzieci. Twoje wsparcie pomaga w utrzymaniu i ulepszaniu aplikacji, utrzymując ją wolną od reklam i niepotrzebnych uprawnień.",
+                    "support-btn": "Postaw mi kawę",
+                    
+                    // Contact section
+                    "contact-title": "Kontakt",
+                    "contact-subtitle": "Masz pytania sugestie lub coś nie działa? Odezwij się — odpowiadam osobiście!",
+                    "contact-form-name": "Imię i nazwisko",
+                    "contact-form-email": "Email",
+                    "contact-form-message": "Wiadomość",
+                    "contact-form-submit": "Wyślij wiadomość",
+                    
+                    // Footer
+                    "footer-logo": "EyeProtector",
+                    "footer-mission": "EyeProtector to niezależna aplikacja tworzona z myślą o realnych potrzebach rodziców i dzieci.<br>Nie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.",
+                    "footer-copyright": "© 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.",
+                    "footer-privacy-btn": "Polityka Prywatności",
+                    
+                },
+                en: {
+                    // Navigation
+                    "nav-about": "About App",
+                    "nav-inspiration": "Inspiration",
+                    "nav-threats": "Health Risks",
+                    "nav-tips": "For Parents",
+                    "nav-functions": "Features",
+                    "nav-download": "Download",
+                    "nav-support": "Support",
+                    "nav-contact": "Contact",
+                    
+                    // About section
+                    "about-title": "EyeProtector",
+                    "about-tagline": "Protect children's eyes in the digital age",
+                    "about-mission": "Take care of your child's eyesight before it's too late.<br>EyeProtector is more than an app — it's daily care for health.<br>Technology doesn't have to harm. With EyeProtector, the screen can support, not burden.<br>Download and act. Don't wait for the perfect moment — take the first step now.<br>Simple solution, real help.<br>EyeProtector works in the background, but its impact is visible every day.",
+                    "about-btn-download": "Download Now",
+                    
+                    // Inspiration section
+                    "inspiration-title": "Inspiration",
+                    "inspiration-subtitle-story": "My Story",
+                    "inspiration-story-p1": "&emsp;&emsp;&emsp;I am a father responsible for raising my son. I am accountable for his health, habits, and safety.",
+                    "inspiration-story-p2": "I didn't wait for symptoms to appear — I supervised him effectively. But this effectiveness came at a price: constant checking, interrupting work, breaking away from household duties. It was frustrating.",
+                    "inspiration-story-p3": "I had enough.",
+                    "inspiration-story-p4": "&emsp;&emsp;&emsp;I'm not a company. I don't have a team. I am a person who sees a problem and doesn't wait for someone else to solve it. Aware that technology is an integral part of modern life and it's worth teaching children healthy habits.",
+                    "inspiration-story-p5": "&emsp;&emsp;&emsp;While searching for a solution, I tested several apps. None met my expectations. I already knew how it should work — effectively, calmly, without distractions and irritating the child. I analyzed my ideas, sat down at the computer, and started intensive work. With each test, new possibilities emerged — features that are planned, that will better protect eyesight and give parents peace of mind. Work on them continues.",
+                    "inspiration-story-p6": "The breakthrough moment?",
+                    "inspiration-story-p7": "&emsp;&emsp;&emsp;When I went to check if my son was maintaining a safe distance. We had a short conversation, and I... forgot to reduce the stove power. The dinner burned. That's when I told myself: enough. I need a tool that will work for me — quietly, effectively, safely.",
+                    "inspiration-story-p8": "&emsp;&emsp;&emsp;Creating the first version was accompanied by hope, joy, and above all, relief. Today, as I develop further features that will dramatically increase the app's capabilities, I feel pure creative joy.",
+                    "inspiration-story-p9": "&emsp;&emsp;&emsp;My son knows he was the inspiration. He has the app, uses it consciously, and says it 'does the job'.",
+                    "inspiration-story-p10": "Basic EyeProtector features will always be available for free. Prevention and improving basic health should be available to everyone — without fees, without compromises.",
+                    "inspiration-subtitle-why": "Why EyeProtector?",
+                    "inspiration-why-p1": "&emsp;&emsp;&emsp;I observed how my son and friends' children spend time with their phones — almost all hunched over, with faces too close to the screen, glued to games and videos. The screen was too close to their eyes, bodies tense, concentration completely absorbed. I realized this isn't a temporary problem.",
+                    "inspiration-why-p2": "&emsp;&emsp;&emsp;This is the digital era that's here to stay — it's everyday reality that requires action.",
+                    "inspiration-why-p3": "It's not just about eyesight. It's also about posture. Hunched posture, tilted head, lack of movement — this is a direct path to neck pain, muscle tension, spinal degeneration, and even chronic headaches. Children don't feel it immediately and don't even know when they already have a problem.",
+                    "inspiration-why-p4": "But I — as an adult who has already been through this — know what it leads to.",
+                    "inspiration-why-p5": "&emsp;&emsp;&emsp;Most concerning, however, are the effects on eyesight — because some of them are irreversible. Too close screen distance and too long uninterrupted time can lead to progressive myopia that becomes permanent for life. Muscles responsible for sharp vision can become overstrained, and eye lubrication can be disrupted. A child won't say they see worse. But their eyes are already tired, already had enough.",
+                    "inspiration-why-p6": "&emsp;&emsp;&emsp;I needed a tool. Not another app with ads, rankings, and notifications. Just something simple that simply works. My EyeProtector app was created to protect eyesight, so parents don't have to constantly interrupt their duties and household chores to supervise their child.",
+                    "inspiration-why-p7": "&emsp;&emsp;&emsp;This is an app that helps protect the eyesight of children, teenagers, but also adults while using screens.",
+                    "inspiration-why-p8": "It works passively. Without ads. Without distractions. Parents configure. Children use. It doesn't diagnose. It doesn't treat. It simply protects. And teaches healthy habits – pure prevention.",
+                    "inspiration-why-p9": "This is a tool that has a real impact on the health of future generations.",
+                    "inspiration-why-p10": "EyeProtector was born from frustration — and from care.",
+                    "inspiration-support-link": "Support? Click here",
+                    
+                    // Threats section
+                    "threats-title": "Health Risks",
+                    "threats-intro": "Excessive screen exposure can lead to serious vision problems and more. Here are the most important threats:",
+                    "threats-vision-title": "👁️ Vision Threats",
+                    "threats-vision-1": "<strong>Progressive myopia</strong> – too close screen distance accelerates the development of this vision defect, which can become permanent for life",
+                    "threats-vision-2": "<strong>Accommodation disorders</strong> – eye muscles responsible for focus can become overstrained and 'lock up'",
+                    "threats-vision-3": "<strong>Digital eye strain (CVS)</strong> – manifests as burning, tearing, blurred vision and eye pain",
+                    "threats-vision-4": "<strong>Dry eye syndrome</strong> – reduced blinking leads to tear film drying and irritation",
+                    "threats-vision-5": "<strong>Binocular vision disorders</strong> – difficulties coordinating both eyes, which can affect concentration and reading",
+                    "threats-vision-6": "<strong>Circadian rhythm disorders</strong> – blue light from close distance can disrupt sleep and melatonin production",
+                    "threats-neuro-title": "🧠 Neurological and Cognitive Threats",
+                    "threats-neuro-1": "<strong>Headaches and migraines</strong> – resulting from eye and neck muscle tension and nervous system overload",
+                    "threats-neuro-2": "<strong>Concentration difficulties</strong> – strained vision and fatigue can affect the ability to focus attention",
+                    "threats-posture-title": "🧍 Posture and Musculoskeletal Threats",
+                    "threats-posture-1": "<strong>Hunched posture</strong> – prolonged leaning over screens leads to permanent postural habits",
+                    "threats-posture-2": "<strong>Neck and shoulder muscle tension</strong> – so-called 'text neck' is an increasingly common problem in children",
+                    "threats-posture-3": "<strong>Spinal degeneration</strong> – long-term overload can lead to structural changes in the cervical and thoracic spine",
+                    "threats-posture-4": "<strong>Back and shoulder pain</strong> – resulting from improper body position while using devices",
+                    "threats-warning": "<strong>All these effects can accumulate — and many of them are difficult or impossible to reverse. That's why prevention is so important before the first symptoms appear.</strong>",
+                    "threats-statistic": "<em>\"Children aged 8-18 spend an average of over 7 hours daily in front of screens\"</em> - American Academy of Pediatrics",
+                    
+                    // Tips section
+                    "tips-title": "What You Can Do as a Parent",
+                    "tips-intro": "Here are practical tips on how to protect your child's eyesight - with EyeProtector app and without it:",
+                    "tips-1-title": "🕒 Limit Screen Time",
+                    "tips-1-1": "Children 2-5 years: maximum 1 hour daily, preferably in 15-20 minute blocks.",
+                    "tips-1-2": "Older children: establish clear rules — e.g., no screens during meals, before bed, in the bedroom.",
+                    "tips-1-3": "Play cartoons on TV instead of tablet — greater distance = less eye strain.",
+                    "tips-2-title": "📏 Maintain Distance and Position",
+                    "tips-2-1": "Screen should be at least 25cm from child's eyes.",
+                    "tips-2-2": "Position device below eye level to avoid straining eye muscles.",
+                    "tips-2-3": "Avoid using screens in darkness — ambient light should be balanced.",
+                    "tips-3-title": "⏳ 20-20-20 Rule",
+                    "tips-3-1": "Every 20 minutes, child should look at something 20 feet (6 meters) away for 20 seconds.",
+                    "tips-3-2": "This helps relax accommodation muscles and prevents digital eye strain.",
+                    "tips-4-title": "🌳 Daily Daylight",
+                    "tips-4-1": "Minimum 2 hours daily outdoors — this is the most effective way to delay myopia development.",
+                    "tips-4-2": "Natural light supports eyeball development and circadian rhythm.",
+                    "tips-5-title": "🛡️ Use Blue Light Filters",
+                    "tips-5-1": "Enable night mode/eye protection on the device.",
+                    "tips-5-2": "Consider blue light filter glasses — especially during extended remote learning.",
+                    "tips-6-title": "🧠 Teach Healthy Habits",
+                    "tips-6-1": "Explain why it's worth taking breaks and looking into the distance.",
+                    "tips-6-2": "Establish rules together — e.g., 'tablet only after lunch and no longer than 30 minutes'.",
+                    "tips-7-title": "🧸 Provide Alternatives",
+                    "tips-7-1": "Offer screen-free activities: physical play, board games, drawing, shared reading.",
+                    "tips-7-2": "The more diverse stimuli, the better for vision and brain development.",
+                    
+                    // Features section
+                    "features-title": "About the App",
+                    "features-p1": "<span class=\"highlighted-text\">Smart limitations</span> - Thanks to intelligent limitations and a system of gentle but very effective notifications and reminders, it effectively supports healthy habits — without irritation and without brutally interrupting screen activities.",
+                    "features-p2": "<span class=\"highlighted-text\">Preventive action</span> - teaches how to use technology safely and consciously, helps prevent digital eye strain.",
+                    "features-p3": "<span class=\"highlighted-text\">Effective protection</span> - Protects every day, without stress, doesn't shout, doesn't disturb, but works effectively. Helps build good habits and prevents digital eye fatigue.",
+                    "features-p4": "<span class=\"highlighted-text\">EyeProtector comprehensive</span> solution designed specifically for eye protection during digital device use, not only for children but also adults.",
+                    "features-p5": "To effectively protect children's eyesight while using mobile devices, EyeProtector uses advanced mechanisms, doesn't activate when the screen is too close to hands or objects, - periodically checks symmetry and presence of pupils. Thanks to analyzing their arrangement, the app can precisely estimate face distance from the screen, regardless of phone model or sensor availability.<br><br>The app works in the background — discreetly, effectively and without irritation. When it detects the screen is too close to eyes, it informs with a gentle sound, the screen automatically dims to the level set by the parent and activates touch lock. This effectively prevents further use until the phone is moved to the previously calibrated safe distance.<br><br>The entire image processing happens locally, without sending data to the cloud.",
+                    
+                    // Functions section
+                    "functions-title": "Features",
+                    "functions-intro": "I'm constantly improving the app, new ideas emerge that increase functionality, comfort and convenience for both parents and children. I'm working on new features, some of which I present below, and in my head there are already real Game Changers waiting!",
+                    "functions-1-title": "20-20-20 Rule",
+                    "functions-1-desc": "Where does the name come from? 20 minutes – 20 feet (6 meters) - 20 seconds – the app will effectively enforce this usage pattern.",
+                    "functions-2-title": "Blue Light Filter",
+                    "functions-2-desc": "This will be an expansion of the existing feature with predefined settings that will filter blue light depending on preferences and ambient lighting.",
+                    "functions-3-title": "Time Limit",
+                    "functions-3-desc": "In the app, it will be possible to set usage time, after which the child won't be able to use the phone until the parent enters a PIN. The entire device lock procedure will be intelligent and gentle for the child, so the child isn't suddenly torn away from screen activity.",
+                    "functions-4-title": "Smart Nap",
+                    "functions-4-desc": "Basic feature - Every screen turn-off stops the elapsed time allocated for device use, but there will be something more, but that's a surprise.",
+                    
+                    // Download section
+                    "download-title": "Download EyeProtector",
+                    "download-intro": "Protect your child's eyesight now - download EyeProtector app",
+                    "download-google-title": "Google Play",
+                    "download-google-note": "Verification in progress",
+                    "download-google-btn": "Coming Soon",
+                    "download-direct-title": "Direct Download",
+                    "download-direct-desc": "Download APK file",
+                    "download-direct-btn": "Download APK",
+                    "download-info": "Android 8.0 (Oreo) and higher | Size: ~5MB",
+                    
+                    // Support section
+                    "support-title": "Support the Project",
+                    "support-text": "EyeProtector is independently developed with the mission of protecting children's eyesight. Your support helps maintain and improve the app, keeping it free from ads and unnecessary permissions.",
+                    "support-btn": "Buy me a coffee",
+                    
+                    // Contact section
+                    "contact-title": "Contact",
+                    "contact-subtitle": "Have questions, suggestions, or something not working? Reach out — I respond personally!",
+                    "contact-form-name": "Name and surname",
+                    "contact-form-email": "Email",
+                    "contact-form-message": "Message",
+                    "contact-form-submit": "Send message",
+                    
+                    // Footer
+                    "footer-logo": "EyeProtector",
+                    "footer-mission": "EyeProtector is an independent app created with real parents' and children's needs in mind.<br>I'm not an institution. I'm a person who doesn't wait but acts.",
+                    "footer-copyright": "© 2025 EyeProtector. All rights reserved. App created by an independent developer — no ads, no tracking, no compromises. Works locally. Protects children's eyesight. Respects privacy.",
+                    "footer-privacy-btn": "Privacy Policy",
+                    
                 }
-            });
+            };
 
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-        }
+            // Function to apply language
+            function applyLanguage(lang) {
+                // Update all elements with data-translate attribute
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang] && translations[lang][key]) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = translations[lang][key];
+                        } else {
+                            element.innerHTML = translations[lang][key];
+                        }
+                    }
+                });
 
-        // Auto-detect language and apply on load
-        document.addEventListener('DOMContentLoaded', function() {
+                // Update HTML lang attribute
+                document.documentElement.lang = lang;
+            }
+
+            // Auto-detect language and apply on load
             const userLang = navigator.language || navigator.userLanguage;
             let currentLang = 'pl';
-            
-            // Jeśli język przeglądarki to polski, ustaw polski, w przeciwnym razie angielski
             if (userLang.startsWith('pl')) {
                 currentLang = 'pl';
             } else {
                 currentLang = 'en';
             }
-            
-            // Update both switchers
             document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(btn => btn.classList.add('active'));
             document.querySelectorAll(`[data-lang="${currentLang === 'pl' ? 'en' : 'pl'}"]`).forEach(btn => btn.classList.remove('active'));
-            
-            // Apply initial language
             applyLanguage(currentLang);
         });
     </script>
 </body>
 </html>
-
-
-
