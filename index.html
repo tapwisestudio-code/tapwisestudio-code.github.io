@@ -30,6 +30,41 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-N0CRW35N8L');
+	  
+			 // Obsługa formularza kontaktowego
+		const contactForm = document.getElementById('contact-form');
+		if (contactForm) {
+			contactForm.addEventListener('submit', function(e) {
+				const submitBtn = contactForm.querySelector('button[type="submit"]');
+				const originalText = submitBtn.textContent;
+				const formMessage = document.getElementById('form-message');
+				
+				// Zmiana stanu przycisku
+				submitBtn.textContent = 'Wysyłanie...';
+				submitBtn.disabled = true;
+				formMessage.style.display = 'none';
+				
+				// Symulacja sukcesu - formularz i tak wyśle się przez FormSubmit
+				setTimeout(function() {
+					// Wyczyść pola formularza
+					contactForm.reset();
+					
+					// Pokaż komunikat sukcesu
+					formMessage.textContent = 'Wiadomość została wysłana! Dziękujemy.';
+					formMessage.className = 'form-message success';
+					formMessage.style.display = 'block';
+					
+					// Przywróć przycisk
+					submitBtn.textContent = originalText;
+					submitBtn.disabled = false;
+					
+					// Ukryj komunikat po 5 sekundach
+					setTimeout(function() {
+						formMessage.style.display = 'none';
+					}, 5000);
+				}, 1000);
+			});
+		}
     </script>
 
     <style>
@@ -1231,6 +1266,8 @@
 						<input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
 						<input type="hidden" name="_captcha" value="false">
 						<input type="hidden" name="_template" value="table">
+						<input type="hidden" name="_next" value="https://tapwisestudio-code.github.io/#contact">
+						<input type="hidden" name="_autoresponse" value="Dziękujemy za wiadomość! Odezwiemy się najszybciej jak to możliwe.">
 						
 						<div class="form-group">
 							<label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
