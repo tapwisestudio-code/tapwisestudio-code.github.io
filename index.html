@@ -31,40 +31,27 @@
       gtag('js', new Date());
       gtag('config', 'G-N0CRW35N8L');
 	  
-			 // Obsługa formularza kontaktowego
-		const contactForm = document.getElementById('contact-form');
-		if (contactForm) {
-			contactForm.addEventListener('submit', function(e) {
-				const submitBtn = contactForm.querySelector('button[type="submit"]');
-				const originalText = submitBtn.textContent;
-				const formMessage = document.getElementById('form-message');
+			// Obsługa formularza kontaktowego
+			function handleFormSubmit(form) {
+				const submitBtn = document.getElementById('submit-btn');
+				const successMessage = document.getElementById('success-message');
 				
-				// Zmiana stanu przycisku
-				submitBtn.textContent = 'Wysyłanie...';
-				submitBtn.disabled = true;
-				formMessage.style.display = 'none';
+				// Pokaż komunikat sukcesu
+				successMessage.style.display = 'block';
 				
-				// Symulacja sukcesu - formularz i tak wyśle się przez FormSubmit
-				setTimeout(function() {
-					// Wyczyść pola formularza
-					contactForm.reset();
-					
-					// Pokaż komunikat sukcesu
-					formMessage.textContent = 'Wiadomość została wysłana! Dziękujemy.';
-					formMessage.className = 'form-message success';
-					formMessage.style.display = 'block';
-					
-					// Przywróć przycisk
-					submitBtn.textContent = originalText;
-					submitBtn.disabled = false;
-					
-					// Ukryj komunikat po 5 sekundach
-					setTimeout(function() {
-						formMessage.style.display = 'none';
-					}, 5000);
-				}, 1000);
-			});
-		}
+				// Wyczyść formularz po krótkim opóźnieniu
+				setTimeout(() => {
+					form.reset();
+				}, 100);
+				
+				// Ukryj komunikat sukcesu po 5 sekundach
+				setTimeout(() => {
+					successMessage.style.display = 'none';
+				}, 5000);
+				
+				// Pozwól formularzowi wysłać się normalnie
+				return true;
+			}
     </script>
 
     <style>
@@ -1176,7 +1163,7 @@
             <p data-translate="features-p4"><span class="highlighted-text">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.</p>
             
             <p style="text-align: left; max-width: 800px; margin: 30px auto; line-height: 1.8;" data-translate="features-p5">
-                Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>
+                Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest ztoo blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>
                 Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>
                 Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.
             </p>
@@ -1262,29 +1249,30 @@
                     </div>
                 </div>
                 <div class="column">
-                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/tapwisestudio@gmail.com" method="POST">
-						<input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
-						<input type="hidden" name="_captcha" value="false">
-						<input type="hidden" name="_template" value="table">
-						<input type="hidden" name="_next" value="https://tapwisestudio-code.github.io/#contact">
-						<input type="hidden" name="_autoresponse" value="Dziękujemy za wiadomość! Odezwiemy się najszybciej jak to możliwe.">
-						
-						<div class="form-group">
-							<label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
-							<input type="text" id="name" name="name" required>
-						</div>
-						<div class="form-group">
-							<label for="email" data-translate="contact-form-email">Email</label>
-							<input type="email" id="email" name="email" required>
-						</div>
-						<div class="form-group">
-							<label for="message" data-translate="contact-form-message">Wiadomość</label>
-							<textarea id="message" name="message" required></textarea>
-						</div>
-						<button type="submit" class="btn" data-translate="contact-form-submit">Wyślij wiadomość</button>
-						
-						<div class="form-message" id="form-message" style="display: none;"></div>
-					</form>
+			<form class="contact-form" id="contact-form" action="https://formsubmit.co/tapwisestudio@gmail.com" method="POST" onsubmit="return handleFormSubmit(this)">
+				<input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
+				<input type="hidden" name="_captcha" value="false">
+				<input type="hidden" name="_template" value="table">
+				<input type="hidden" name="_next" value="https://tapwisestudio-code.github.io/#contact?success=true">
+				
+				<div class="form-group">
+					<label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email" data-translate="contact-form-email">Email</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message" data-translate="contact-form-message">Wiadomość</label>
+					<textarea id="message" name="message" required></textarea>
+				</div>
+				<button type="submit" class="btn" data-translate="contact-form-submit" id="submit-btn">Wyślij wiadomość</button>
+				
+				<div class="form-message success" id="success-message" style="display: none;">
+					✅ Wiadomość została wysłana! Dziękujemy.
+				</div>
+			</form>
                 </div>
             </div>
         </div>
@@ -1401,70 +1389,6 @@
             setupLanguageSwitcher(desktopLangButtons);
             setupLanguageSwitcher(mobileLangButtons);
 
-            // CONTACT FORM HANDLING - SMARTFORMS (poprawiona wersja)
-            const contactForm = document.getElementById('contact-form');
-            const formMessage = document.getElementById('form-message');
-            
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    
-                    const submitBtn = contactForm.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-
-                    // Zmiana stanu przycisku
-                    submitBtn.textContent = 'Wysyłanie...';
-                    submitBtn.disabled = true;
-                    formMessage.style.display = 'none';
-
-                    try {
-                        const formData = new FormData(contactForm);
-                        
-                        // SmartForms oczekuje danych w formacie x-www-form-urlencoded
-                        const formDataObject = {};
-                        formData.forEach((value, key) => {
-                            formDataObject[key] = value;
-                        });
-                        
-                        const response = await fetch(contactForm.action, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                            },
-                            body: new URLSearchParams(formDataObject).toString()
-                        });
-
-                        if (response.ok) {
-                            const data = await response.json();
-                            if (data.success) {
-                                formMessage.textContent = 'Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.';
-                                formMessage.className = 'form-message success';
-                                formMessage.style.display = 'block';
-                                contactForm.reset();
-                            } else {
-                                throw new Error('Błąd wysyłania formularza');
-                            }
-                        } else {
-                            throw new Error('Błąd sieci');
-                        }
-                    } catch (error) {
-                        console.error('Błąd formularza:', error);
-                        formMessage.textContent = 'Błąd wysyłania wiadomości. Proszę spróbować ponownie lub wysłać email bezpośrednio na: TapWiseStudio@gmail.com';
-                        formMessage.className = 'form-message error';
-                        formMessage.style.display = 'block';
-                    } finally {
-                        // Przywrócenie przycisku
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        
-                        // Ukryj komunikat po 5 sekundach
-                        setTimeout(function() {
-                            formMessage.style.display = 'none';
-                        }, 5000);
-                    }
-                });
-            }
-
             // Language translations
             const translations = {
                 pl: {
@@ -1564,7 +1488,7 @@
                     "features-p2": "<span class=\"highlighted-text\">Działanie profilaktyczne</span> - uczy, jak korzystać z technologii w sposób bezpieczny i świadomy, pomaga zapobiegać cyfrowemu zmęczeniu wzroku.",
                     "features-p3": "<span class=\"highlighted-text\">Skuteczna ochrona</span> - Chroni każdego dnia, bez stresu, nie krzyczy, nie przeszkadza, ale działa skutecznie. Pomaga budować dobre nawyki i zapobiega cyfrowemu zmęczeniu oczu.",
                     "features-p4": "<span class=\"highlighted-text\">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.",
-                    "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
+                    "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest ztoo blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
                     
                     // Functions section
                     "functions-title": "Funkcje",
