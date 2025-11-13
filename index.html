@@ -7,20 +7,22 @@
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id=GTM-MMJXGVP2';f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-MMJXGVP2');</script>
-		<!-- End Google Tag Manager -->
-
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EyeProtector - Chroni Twoje Oczy Przed Zmęczeniem</title>
-	<!-- Open Graph meta tags -->
-<meta property="og:title" content="EyeProtector - aplikacja dla rodziców">
-<meta property="og:description" content="Darmowa aplikacja wspierająca rodziców w dbaniu o zdrowe podczas korzystanie z telefonu.">
-<meta property="og:image" content="ikona_eyeprotector_630x630.png">
-<meta property="og:url" content="https://tapwisestudio-code.github.io/">
-<meta property="og:type" content="website">
-
+			<!-- End Google Tag Manager -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>EyeProtector - Chroni Twoje Oczy Przed Zmęczeniem</title>
+			<!-- Open Graph meta tags -->
+		<meta property="og:title" content="EyeProtector - aplikacja dla rodziców">
+		<meta property="og:description" content="Darmowa aplikacja wspierająca rodziców w dbaniu o zdrowe podczas korzystanie z telefonu.">
+		<meta property="og:image" content="ikona_eyeprotector_630x630.png">
+		<meta property="og:url" content="https://tapwisestudio-code.github.io/">
+		<meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+				<!-- Favicon -->
+			<link rel="icon" type="image/x-icon" href="ikona_eyeprotector.png">
+			<link rel="apple-touch-icon" href="ikona_eyeprotector.png">
+			<link rel="shortcut icon" href="ikona_eyeprotector.png">
+				
     <!-- Google Analytics tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0CRW35N8L"></script>
     <script>
@@ -907,9 +909,9 @@
         .support-coffee-link:hover .coffee-icon {
             transform: scale(1.1);
         }
-    </style>
+	</style>
 </head>
-<body>
+	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJXGVP2"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1225,24 +1227,27 @@
                     </div>
                 </div>
                 <div class="column">
-                    <form class="contact-form" id="contact-form" name="contact-form" method="POST" action="https://smartforms.dev/submit/691080efc184545ccc20dcc4">
-                        <input type="hidden" name="_subject" value="Nowa wiadomość z formularza EyeProtector">
-                        <input type="hidden" name="_captcha" value="false">
-                        <div class="form-group">
-                            <label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-translate="contact-form-email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-translate="contact-form-message">Wiadomość</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" data-translate="contact-form-submit">Wyślij wiadomość</button>
-                        <div class="form-message" id="form-message"></div>
-                    </form>
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/tapwisestudio@gmail.com" method="POST">
+						<input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
+						<input type="hidden" name="_captcha" value="false">
+						<input type="hidden" name="_template" value="table">
+						
+						<div class="form-group">
+							<label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email" data-translate="contact-form-email">Email</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="message" data-translate="contact-form-message">Wiadomość</label>
+							<textarea id="message" name="message" required></textarea>
+						</div>
+						<button type="submit" class="btn" data-translate="contact-form-submit">Wyślij wiadomość</button>
+						
+						<div class="form-message" id="form-message" style="display: none;"></div>
+					</form>
                 </div>
             </div>
         </div>
@@ -1710,7 +1715,6 @@
                     
                 }
             };
-
             // Function to apply language
             function applyLanguage(lang) {
                 // Update all elements with data-translate attribute
@@ -1734,9 +1738,9 @@
             let currentLang = 'pl';
             if (userLang.startsWith('pl')) {
                 currentLang = 'pl';
-            } else {
-                currentLang = 'en';
-            }
+						} else {
+							currentLang = 'en';
+					}
             document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(btn => btn.classList.add('active'));
             document.querySelectorAll(`[data-lang="${currentLang === 'pl' ? 'en' : 'pl'}"]`).forEach(btn => btn.classList.remove('active'));
             applyLanguage(currentLang);
