@@ -1,61 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-			<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id=GTM-MMJXGVP2';f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-MMJXGVP2');</script>
-			<!-- End Google Tag Manager -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>EyeProtector - Chroni Twoje Oczy Przed Zmęczeniem</title>
-			<!-- Open Graph meta tags -->
-		<meta property="og:title" content="EyeProtector - aplikacja dla rodziców">
-		<meta property="og:description" content="Darmowa aplikacja wspierająca rodziców w dbaniu o zdrowe podczas korzystanie z telefonu.">
-		<meta property="og:image" content="ikona_eyeprotector_1200x630.png">
-		<meta property="og:url" content="https://tapwisestudio-code.github.io/">
-		<meta property="og:type" content="website">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=GTM-MMJXGVP2';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MMJXGVP2');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeProtector - Chroni Twoje Oczy Przed Zmęczeniem</title>
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="EyeProtector - aplikacja dla rodziców">
+    <meta property="og:description" content="Darmowa aplikacja wspierająca rodziców w dbaniu o zdrowe podczas korzystanie z telefonu.">
+    <meta property="og:image" content="ikona_eyeprotector_1200x630.png">
+    <meta property="og:url" content="https://tapwisestudio-code.github.io/">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-				<!-- Favicon -->
-			<link rel="icon" type="image/x-icon" href="ikona_eyeprotector.png">
-			<link rel="apple-touch-icon" href="ikona_eyeprotector.png">
-			<link rel="shortcut icon" href="ikona_eyeprotector.png">
-				
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="ikona_eyeprotector.png">
+    <link rel="apple-touch-icon" href="ikona_eyeprotector.png">
+    <link rel="shortcut icon" href="ikona_eyeprotector.png">
+    
     <!-- Google Analytics tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0CRW35N8L"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-N0CRW35N8L');
-	  
-			// Obsługa formularza kontaktowego
-			function handleFormSubmit(form) {
-				const submitBtn = document.getElementById('submit-btn');
-				const successMessage = document.getElementById('success-message');
-				
-				// Pokaż komunikat sukcesu
-				successMessage.style.display = 'block';
-				
-				// Wyczyść formularz po krótkim opóźnieniu
-				setTimeout(() => {
-					form.reset();
-				}, 100);
-				
-				// Ukryj komunikat sukcesu po 5 sekundach
-				setTimeout(() => {
-					successMessage.style.display = 'none';
-				}, 5000);
-				
-				// Pozwól formularzowi wysłać się normalnie
-				return true;
-			}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N0CRW35N8L');
     </script>
 
     <style>
-   
         :root {
             --primary-blue: #2a5c8d;
             --light-blue: #4a8ccc;
@@ -104,11 +85,6 @@
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        .bahnschrift-font {
-            font-family: "Bahnschrift", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
         }
 
         .header-container {
@@ -162,10 +138,6 @@
             align-items: center;
             position: relative;
             background: url('ikona_eyeprotector.png') center/contain no-repeat;
-        }
-
-        .logo-cross {
-            display: none;
         }
 
         .nav-links {
@@ -619,7 +591,8 @@
         }
 
         .download-info {
-            margin-top: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             font-size: 0.9rem;
             color: var(--muted-text);
         }
@@ -757,22 +730,15 @@
             font-family: "Bahnschrift", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 600;
         }
-
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+        .google-testers-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-yellow);
+    text-align: left;
+}
 
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -931,21 +897,21 @@
         .support-coffee-link:hover .coffee-icon {
             transform: scale(1.1);
         }
-	</style>
+    </style>
 </head>
-	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJXGVP2"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJXGVP2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div class="language-switcher">
         <button class="lang-btn active" data-lang="pl">PL</button>
         <button class="lang-btn" data-lang="en">EN</button>
     </div>
 
     <div class="header-container">
-        <div class="header-image">
-        </div>
+        <div class="header-image"></div>
     </div>
 
     <nav>
@@ -969,9 +935,7 @@
                     <button class="mobile-lang-btn active" data-lang="pl">PL</button>
                     <button class="mobile-lang-btn" data-lang="en">EN</button>
                 </div>
-                <div class="hamburger">
-                    ☰
-                </div>
+                <div class="hamburger">☰</div>
             </div>
         </div>
     </nav>
@@ -980,6 +944,7 @@
         <div class="container">
             <h1 class="app-name" data-translate="about-title">EyeProtector</h1>
             <p class="app-tagline" data-translate="about-tagline">Chroń wzrok dzieci w erze cyfrowej</p>
+            
             <p class="app-mission" data-translate="about-mission">
                 Zadbaj o wzrok swojego dziecka zanim będzie za późno.<br>
                 EyeProtector to więcej niż aplikacja — to codzienna troska o zdrowie.<br>
@@ -1000,9 +965,9 @@
                     <h3 class="section-subtitle" data-translate="inspiration-subtitle-story">Moja historia</h3>
                     <p data-translate="inspiration-story-p1">&emsp;&emsp;&emsp;Jestem ojcem, na którego barkach spoczywa wychowanie syna. To ja odpowiadam za jego zdrowie, nawyki, bezpieczeństwo.</p>
                     <p data-translate="inspiration-story-p2">Nie czekałem, aż pojawią się objawy — pilnowałem go skutecznie. Ale ta skuteczność miała swoją cenę: ciągłe zerkanie, przerywanie pracy, odrywanie się od obowiązków domowych. To było irytujące.</p>
-                    <p data-translate="inspiration-story-p3">Miałem dość.</p><br></br>
-                    <p data-translate="inspiration-story-p4">&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem, człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.</p>
-                    <p data-translate="inspiration-story-p5">&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka.Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.</p><br></br>
+                    <p data-translate="inspiration-story-p3">Miałem dość.</p><br><br>
+                    <p data-translate="inspiration-story-p4">&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.</p>
+                    <p data-translate="inspiration-story-p5">&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka. Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.</p><br><br>
                     <p data-translate="inspiration-story-p6">Moment przełomowy?</p>
                     <p data-translate="inspiration-story-p7">&emsp;&emsp;&emsp;Kiedy poszedłem do syna sprawdzić, czy zachowuje bezpieczną odległość. Mieliśmy krótką rozmowę, a ja… zapomniałem zmniejszyć moc palnika. Obiad się przypalił. Wtedy powiedziałem sobie: dość. Potrzebuję narzędzia, które będzie działać za mnie — cicho, skutecznie, bezpiecznie.</p>
                     <p data-translate="inspiration-story-p8">&emsp;&emsp;&emsp;Tworzeniu pierwszej wersji towarzyszyła nadzieja, radość i przede wszystkim ulga. Dziś, gdy rozwijam kolejne funkcje, które diametralnie zwiększą możliwości aplikacji, czuję czystą radość twórczą.</p>
@@ -1011,11 +976,11 @@
                 </div>
                 <div class="column">
                     <h3 class="section-subtitle" data-translate="inspiration-subtitle-why">Dlaczego EyeProtector?</h3>
-                    <p data-translate="inspiration-why-p1">&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą ztoo blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.</p><br></br>
+                    <p data-translate="inspiration-why-p1">&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą zbyt blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.</p><br><br>
                     <p data-translate="inspiration-why-p2">&emsp;&emsp;&emsp;To era cyfrowa która już zostanie — to codzienność, która wymaga działania.</p>
                     <p data-translate="inspiration-why-p3">To nie tylko kwestia wzroku. To także postawa. Zgarbiona sylwetka, pochylona głowa, brak ruchu — to prosta droga do bólów karku, napięć mięśniowych, zwyrodnień kręgosłupa, a nawet przewlekłych bólów głowy. Dzieci nie czują tego od razu nie wiedzą nawet kiedy już mają problem.</p>
                     <p data-translate="inspiration-why-p4">Ale ja — jako dorosły, który już to przeszedł — wiem, czym to grozi.</p>
-                    <p data-translate="inspiration-why-p5">&emsp;&emsp;&emsp;Najbardziej niepokojące są jednak skutki dla wzroku — bo część z nich jest nieodwracalna. Zbyt bliska odległość od ekranu i zbyt długi czas bez przerwy mogą prowadzić do postępującej krótkowzroczności, która utrwala się na całe życie. Mięśnie odpowiedzialne za ostre widzenie mogą się przeciążyć, a nawilżenie oka — zaburzyć. Dziecko nie powie, że widzi gorzej. Ale jego oczy już się męczą, już mają dość.</p><br></br>
+                    <p data-translate="inspiration-why-p5">&emsp;&emsp;&emsp;Najbardziej niepokojące są jednak skutki dla wzroku — bo część z nich jest nieodwracalna. Zbyt bliska odległość od ekranu i zbyt długi czas bez przerwy mogą prowadzić do postępującej krótkowzroczności, która utrwala się na całe życie. Mięśnie odpowiedzialne za ostre widzenie mogą się przeciążyć, a nawilżenie oka — zaburzyć. Dziecko nie powie, że widzi gorzej. Ale jego oczy już się męczą, już mają dość.</p><br><br>
                     <p data-translate="inspiration-why-p6">&emsp;&emsp;&emsp;Potrzebowałem narzędzia. Nie kolejnej aplikacji z reklamami, rankingami i powiadomieniami. Tylko czegoś prostego, co po prostu działa. Moja aplikacja EyeProtector powstała po to, by chronić wzrok, by rodzic nie musiał co chwilę odrywać się od obowiązków i zajęć domowych, by pilnować dziecka.</p>
                     <p data-translate="inspiration-why-p7">&emsp;&emsp;&emsp;To aplikacja, która pomaga chronić wzrok dzieci, młodzieży, ale też dorosłych podczas korzystania z ekranów.</p>
                     <p data-translate="inspiration-why-p8">Działa pasywnie. Bez reklam. Bez rozpraszaczy. Rodzic konfiguruje. Dziecko korzysta. Nie diagnozuje. Nie leczy. Po prostu chroni. I uczy zdrowych nawyków – czysta profilaktyka.</p>
@@ -1163,9 +1128,9 @@
             <p data-translate="features-p4"><span class="highlighted-text">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.</p>
             
             <p style="text-align: left; max-width: 800px; margin: 30px auto; line-height: 1.8;" data-translate="features-p5">
-                Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest ztoo blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>
+                Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>
                 Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>
-                Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.
+                Cały proces przetwarzania obrazu odbywa się lokalnie, bez przesyłania danych do chmury.
             </p>
         </div>
     </section>
@@ -1192,7 +1157,7 @@
                 <div class="feature">
                     <div class="feature-icon">⏱️</div>
                     <h3 data-translate="functions-3-title">Limit czasu</h3>
-                    <p data-translate="functions-3-desc">W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzić nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny, dla dziecka,  tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.</p>
+                    <p data-translate="functions-3-desc">W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzic nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny dla dziecka, tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">😴</div>
@@ -1203,935 +1168,145 @@
         </div>
     </section>
 
-    <section class="download-section" id="download">
+    <section class="download-section" id="download" style="padding: 10px 0;">
         <div class="container">
             <h2 class="section-title" data-translate="download-title">Pobierz EyeProtector</h2>
             <p data-translate="download-intro">Chroń wzrok swojego dziecka już teraz - pobierz aplikację EyeProtector</p>
             
-            <!-- START: Sekcja opcji pobierania -->
             <div class="download-options">
-                <!-- Opcja Google Play (wyłączona) -->
                 <div class="download-option disabled">
                     <h3 data-translate="download-google-title">Google Play</h3>
                     <p class="verification-note" data-translate="download-google-note">Weryfikacja trwa</p>
                     <button class="btn" disabled data-translate="download-google-btn">Dostępne wkrótce</button>
                 </div>
                 
-                <!-- Opcja bezpośredniego pobierania (wyłączona) -->
                 <div class="download-option disabled">
                     <h3 data-translate="download-direct-title">Bezpośrednio</h3>
                     <p data-translate="download-direct-desc">Aktywny po testach Google</p>
                     <button class="btn" disabled data-translate="download-direct-btn">Pobierz APK</button>
                 </div>
             </div>
-            <!-- END: Sekcja opcji pobierania -->
             
-            <!-- START: Informacje techniczne (przesunięte 2 wersy wyżej) -->
-            <p class="download-info" data-translate="download-info" style="margin-top: 60px; margin-bottom: 40px;">Android 8.0 (Oreo) i wyższe | Rozmiar: ~5MB</p>
-            <!-- END: Informacje techniczne -->
+           <p style="margin: 5px 0 10px 0; font-size: 0.9rem; color: var(--muted-text); position: relative; top: -20px;">Android 8.0 (Oreo) i wyższe | Rozmiar: ~5MB</p>
             
-            <!-- START: Sekcja testerów Google -->
-            <div class="google-testers-section" style="margin-top: 40px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; padding: 25px; background-color: var(--card-bg); border-radius: 10px; border-left: 4px solid var(--accent-yellow);">
-                <h3 style="color: var(--accent-yellow); margin-bottom: 15px; line-height: 1.3;">Dołącz do testów aplikacji EyeProtector i pomóż mi w czymś naprawdę ważnym.</h3>
-                <p style="margin-bottom: 20px; line-height: 1.2;">
+                                    <!-- SEKCJA TESTÓW - FORMULARZ MAILERLITE POPRAWIONY -->
+            <div style="text-align: left; max-width: 900px; margin: 20px auto;">
+                <h3 style="color: #ffcc00;">Dołącz do testów aplikacji EyeProtector i pomóż mi w czymś naprawdę ważnym.</h3>
+                <p>
                     Twoja obecność w gronie testerów ma ogromne znaczenie – każda instalacja zbliża projekt do oficjalnej publikacji w Google Play. 
                     Twoje wsparcie to krok, dzięki któremu aplikacja stanie się dostępna dla wszystkich za darmo!
                 </p>
-                <p style="margin-bottom: 20px; line-height: 1.2;">
+                <p>
                     - Wystarczy podać swój adres e‑mail i kliknąć „Zapisz mnie do testów”.<br>
                     - Otrzymasz od Google link do pobrania aplikacji.
                 </p>
-                <p style="margin-bottom: 20px; line-height: 1.2;">
+                <p>
                     Twoim jedynym zadaniem jest zainstalować aplikację i pozostawić ją na telefonie do końca trwania testów. Nie musisz niczego opisywać ani raportować – sama obecność aplikacji na Twoim urządzeniu już mi bardzo pomaga. Jeśli jednak zechcesz podzielić się opinią lub uwagami, będzie to dla mnie niezwykle cenna wskazówka i dodatkowe wsparcie.
                 </p>
                 
-                <!-- START: Formularz MailerLite -->
-                <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1764685");</style>
-    <style type="text/css">
-    /* LOADER */
-    .ml-form-embedSubmitLoad {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-    }
-
-    .g-recaptcha {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    height: ;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-
-    .ml-form-embedSubmitLoad:after {
-      content: " ";
-      display: block;
-      width: 11px;
-      height: 11px;
-      margin: 1px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-    border-color: #0C101A #0C101A #0C101A transparent;
-    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
-    }
-    @keyframes ml-form-embedSubmitLoad {
-      0% {
-      transform: rotate(0deg);
-      }
-      100% {
-      transform: rotate(360deg);
-      }
-    }
-      #mlb2-34353319.ml-form-embedContainer {
-        box-sizing: border-box;
-        display: table;
-        margin: 0 auto;
-        position: static;
-        width: 100% !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer h4,
-      #mlb2-34353319.ml-form-embedContainer p,
-      #mlb2-34353319.ml-form-embedContainer span,
-      #mlb2-34353319.ml-form-embedContainer button {
-        text-transform: none !important;
-        letter-spacing: normal !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper {
-        background-color: transparent;
-        
-        border-width: 0px;
-        border-color: transparent;
-        border-radius: 6px;
-        border-style: solid;
-        box-sizing: border-box;
-        display: inline-block !important;
-        margin: 0;
-        padding: 0;
-        position: relative;
-              }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 400px; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-align-left { text-align: left; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-align-center { text-align: center; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-align-right { text-align: right; }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        height: auto;
-        margin: 0 auto !important;
-        max-width: 100%;
-        width: undefinedpx;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
-        padding: 20px 20px 0 20px;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
-        padding-bottom: 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
-        text-align: left;
-        margin: 0 0 20px 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
-        color: #FBC900;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        margin: 0 0 10px 0;
-        text-align: left;
-        word-break: break-word;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-        color: #aeeeac;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        margin: 0 0 10px 0;
-        text-align: left;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
-        color: #aeeeac;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
-        list-style-type: lower-alpha;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
-        list-style-type: lower-roman;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
-        color: #000000;
-        text-decoration: underline;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
-        text-align: left!important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
-        margin-bottom: 5px;
-        color: #fd0000;
-        font-size: 14px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-weight: bold; font-style: normal; text-decoration: none;;
-        display: inline-block;
-        line-height: 20px;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
-        margin: 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
-        margin: 0;
-        width: 100%;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        margin: 0 0 20px 0;
-        width: 100%;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        float: left;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-        margin: 0;
-        padding: 0 0 20px 0;
-        width: 100%;
-        height: auto;
-        float: left;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
-        margin: 0 0 10px 0;
-        width: 100%;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
-        margin: 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
-        margin: 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
-        background-color: #1A2A3F !important;
-        color: #36B37E !important;
-        border-color: #FBC900;
-        border-radius: 6px !important;
-        border-style: solid !important;
-        border-width: 2px !important;
-        font-family: Tahoma, Geneva, sans-serif;
-        font-size: 17px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #36B37E; }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #36B37E; }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #36B37E; }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #36B37E; }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
-        background-color: #1A2A3F !important;
-        color: #36B37E !important;
-        border-color: #FBC900;
-        border-radius: 6px !important;
-        border-style: solid !important;
-        border-width: 2px !important;
-        font-family: Tahoma, Geneva, sans-serif;
-        font-size: 17px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-          border-color: #FBC900!important;
-          background-color: #1A2A3F!important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"]{
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin-top: 5px;
-        margin-left: -1.5rem;
-        overflow: visible;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-        border-radius: 4px!important;
-      }
-
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
-          border-color: #0F1A2A!important;
-          background-color: #000000!important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
-           top: 2px;
-           box-sizing: border-box;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-           top: 0px!important;
-           box-sizing: border-box!important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-        top: 0px!important;
-           box-sizing: border-box!important;
-      }
-
-       #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
-            top: 0px!important;
-            box-sizing: border-box!important;
-            position: absolute;
-            left: -1.5rem;
-            display: block;
-            width: 1rem;
-            height: 1rem;
-            content: "";
-       }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
-        top: 0px!important;
-        box-sizing: border-box!important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
-          position: absolute;
-          top: 4px;
-          left: -1.5rem;
-          display: block;
-          width: 16px;
-          height: 16px;
-          pointer-events: none;
-          content: "";
-          background-color: #ffffff;
-          border: #adb5bd solid 1px;
-          border-radius: 50%;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
-          position: absolute;
-          top: 2px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-          position: absolute;
-          top: 4px;
-          left: -1.5rem;
-          display: block;
-          width: 16px;
-          height: 16px;
-          pointer-events: none;
-          content: "";
-          background-color: #ffffff;
-          border: #adb5bd solid 1px;
-          border-radius: 50%;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
-          position: absolute;
-          top: 0px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-          position: absolute;
-          top: 0px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
-          background: no-repeat 50%/50% 50%;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-          background: no-repeat 50%/50% 50%;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
-        position: relative;
-        display: block;
-        min-height: 1.5rem;
-        padding-left: 1.5rem;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
-          position: absolute;
-          z-index: -1;
-          opacity: 0;
-          box-sizing: border-box;
-          padding: 0;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
-          color: #2fc500;
-          font-size: 12px!important;
-          font-family: 'Montserrat', sans-serif;
-          line-height: 22px;
-          margin-bottom: 0;
-          position: relative;
-          vertical-align: top;
-          font-style: normal;
-          font-weight: 700;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
-        background-color: #1A2A3F !important;
-        color: #36B37E !important;
-        border-color: #FBC900;
-        border-radius: 6px !important;
-        border-style: solid !important;
-        border-width: 2px !important;
-        font-family: Tahoma, Geneva, sans-serif;
-        font-size: 17px !important;
-        line-height: 20px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 28px 10px 12px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-        background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
-
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
-        height: auto;
-        width: 100%;
-        float: left;
-      }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
-        background-color: #1A2A3F;
-        color: #36B37E;
-        border-color: #FBC900;
-        border-radius: 6px;
-        border-style: solid;
-        border-width: 2px;
-        font-family: Tahoma, Geneva, sans-serif;
-        font-size: 17px;
-        line-height: 20px;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px;
-        width: 100%;
-        box-sizing: border-box;
-        overflow-y: initial;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
-        background-color: #FBC900 !important;
-        border-color: #FBC900;
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 25px;
-        box-shadow: none;
-        color: #0C101A !important;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        font-size: 19px !important;
-        font-weight: 700;
-        line-height: 20px;
-        margin: 0 !important;
-        padding: 10px !important;
-        width: 100%;
-        height: auto;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
-        background-color: #36B37E !important;
-        border-color: #36B37E !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin-top: 5px;
-        margin-left: -1.5rem;
-        overflow: visible;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
-        color: #000000;
-        display: block;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        text-align: left;
-        margin-bottom: 0;
-        position: relative;
-        vertical-align: top;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
-        font-weight: normal;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        display: block;
-        min-height: 24px;
-        padding-left: 24px;
-
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
-        color: #000000;
-        text-decoration: underline;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
-        color: #000000 !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-        font-size: 12px !important;
-        font-weight: normal !important;
-        line-height: 18px !important;
-        padding: 0 !important;
-        margin: 0 5px 0 0 !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
-        margin: 0;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
-        margin: 0 0 20px 0;
-        float: left;
-        width: 100%;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
-        background-color: #FBC900 !important;
-        border: none !important;
-        border-radius: 25px !important;
-        box-shadow: none !important;
-        color: #0C101A !important;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif !important;
-        font-size: 19px !important;
-        font-weight: 700 !important;
-        line-height: 21px !important;
-        height: auto;
-        padding: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
-        display: none;
-      }
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
-        background-color: #36B37E !important;
-      }
-      .ml-subscribe-close {
-        width: 30px;
-        height: 30px;
-        background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
-        background-size: 30px;
-        cursor: pointer;
-        margin-top: -10px;
-        margin-right: -10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-      .ml-error input, .ml-error textarea, .ml-error select {
-        border-color: red!important;
-      }
-
-      .ml-error .custom-checkbox-radio-list {
-        border: 1px solid red !important;
-        border-radius: 6px;
-        padding: 10px;
-      }
-
-      .ml-error .label-description,
-      .ml-error .label-description p,
-      .ml-error .label-description p a,
-      .ml-error label:first-child {
-        color: #ff0000 !important;
-      }
-
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
-      #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
-        color: #ff0000 !important;
-      }
-            @media only screen and (max-width: 400px){
-
-        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
-        .ml-form-formContent.horozintalForm { float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
-
-      }
-    </style>
-
-    
-  
-    
-    
-
-    
-    
-
-    
-    
-
-    
-
-      
-        
-        
-      
-
-      
-        
-        
-      
-
-      
-
-            
-            
-            
-            
-            
-            
-      
-
-      
-
-      
-        
-        
-         
-        
-        
-      
-
-        
-        
-        
-        
-        
-        
-      
-
-       
-
-        
-        
-        
-        
-        
-        
-        
-       
-
-
-      
-        
-        
-        
-        
-  
-
-
-
-  
-        
-        
-        
-      
-
-
-      
-    
-    
-    
-    
-    
-    
-    
-  
-
-  
-        
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-      
-
-       
-
-        
-        
-        
-        
-       
-
-       
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-        
-        
-       
-
-    
-
-    
-
-
-      
-
-
-      
-
-      
-      
-
-      
-
-      
-
-
-
-
-
-    
-
-      
-    <div id="mlb2-34353319" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-34353319">
-      <div class="ml-form-align-center ">
-        <div class="ml-form-embedWrapper embedForm">
-
-          
-          
-
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-
-            <div class="ml-form-embedContent" style="margin-bottom: 0px; ">
-              
-            </div>
-
-            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1966100/forms/173214256374744366/subscribe" data-code="" method="post" target="_blank">
-              <div class="ml-form-formContent">
+                <!-- FORMULARZ MAILERLITE (bez kafelków, mały, wyśrodkowany) -->
+                               <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1764685");</style>
+                <style type="text/css">
+                /* RESET Wszystkich stylów MailerLite */
+                #mlb2-34353319.ml-form-embedContainer * {
+                    all: unset !important;
+                    box-sizing: border-box !important;
+                }
                 
+                #mlb2-34353319.ml-form-embedContainer {
+                    max-width: 350px !important;
+                    margin: 20px auto !important;
+                    text-align: center !important;
+                }
+                
+                #mlb2-34353319.ml-form-embedContainer .ml-form-embedWrapper {
+                    all: unset !important;
+                }
+                
+                #mlb2-34353319.ml-form-embedContainer .ml-form-embedBody {
+                    all: unset !important;
+                }
+                
+                /* Nasze style dla pola email */
+                #mlb2-34353319 input[type="email"] {
+                    width: 100% !important;
+                    padding: 8px 12px !important;
+                    background-color: var(--light-bg) !important;
+                    color: var(--text-color) !important;
+                    border: 1px solid var(--light-blue) !important;
+                    border-radius: 6px !important;
+                    font-size: 14px !important;
+                    text-align: center !important;
+                    margin-bottom: 10px !important;
+                    display: block !important;
+                }
+                
+                #mlb2-34353319 input[type="email"]::placeholder {
+                    color: var(--muted-text) !important;
+                    font-size: 13px !important;
+                }
+                
+                /* Nasze style dla przycisku */
+                #mlb2-34353319 button[type="submit"] {
+                    background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--gold) 100%) !important;
+                    color: #1A293E !important;
+                    border: none !important;
+                    border-radius: 6px !important;
+                    font-weight: bold !important;
+                    font-size: 14px !important;
+                    padding: 8px 20px !important;
+                    cursor: pointer !important;
+                    display: inline-block !important;
+                }
+                
+                #mlb2-34353319 button[type="submit"]:hover {
+                    transform: translateY(-2px) !important;
+                    box-shadow: 0 5px 10px rgba(255, 204, 0, 0.3) !important;
+                }
+                
+                /* Ukryj niepotrzebne elementy */
+                #mlb2-34353319 .ml-form-embedContent,
+                #mlb2-34353319 .ml-form-successBody,
+                #mlb2-34353319 .loading {
+                    display: none !important;
+                }
+                </style>
+                </style>
 
-                  
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-
-                      
-
-
-                      <!-- input -->
-                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Wymagany adres Gmail" autocomplete="email">
-                      <!-- /input -->
-
-                      <!-- textarea -->
-                      
-                      <!-- /textarea -->
-
-                      <!-- select -->
-                      
-                      <!-- /select -->
-
-                      <!-- checkboxes -->
-            
-            <!-- /checkboxes -->
-
-                      <!-- radio -->
-                      
-                      <!-- /radio -->
-
-                      <!-- countries -->
-                      
-                      <!-- /countries -->
-
-
-
-
-
+                <div id="mlb2-34353319" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-34353319">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <div class="ml-form-embedContent" style="margin-bottom: 0px;"></div>
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1966100/forms/173214256374744366/subscribe" data-code="" method="post" target="_blank">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Wpisz swój adres Gmail" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary">Zapisz mnie do testów</button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                            <div class="ml-form-embedSubmitLoad"></div>
+                                            <span class="sr-only">Loading...</span>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                
-              </div>
+                </div>
 
-              
-
-              <!-- Privacy policy -->
-              
-              <!-- /Privacy policy -->
-
-              
-
-              
-
-              
-
-
-
-
-
-
-              
-              <input type="hidden" name="ml-submit" value="1">
-
-              <div class="ml-form-embedSubmit">
-                
-                  <button type="submit" class="primary">Zapisz mnie do testów</button>
-                
-                <button disabled="disabled" style="display: none;" type="button" class="loading">
-                  <div class="ml-form-embedSubmitLoad"></div>
-                  <span class="sr-only">Loading...</span>
-                </button>
-              </div>
-
-              
-              <input type="hidden" name="anticsrf" value="true">
-            </form>
-          </div>
-
-          <div class="ml-form-successBody row-success" style="display: none">
-
-            <div class="ml-form-successContent">
-              
-                <h4>Dziękuję za Twoje zgłoszenie</h4>
-                <p style="text-align: center;"><span style="color: rgb(251, 201, 0);"><br></span></p>
-<p style="text-align: center;"><span style="color: rgb(251, 201, 0);">Jestem wdzięczny że poświęcasz swój czas i pomagasz stworzyć coś dobrego.</span></p>
-<p><span style="color: rgb(251, 201, 0);"><br></span></p>
-<p><span style="color: rgb(251, 201, 0);">Masz teraz dostęp do aplikacji przed wszystkimi.</span></p>
-<p><span style="color: rgb(251, 201, 0);">Wkrótce na maila&nbsp;otrzymasz link do pobrania aplikacji ze sklepu Google – oczekuj wiadomości email&nbsp;z linkiem.</span><br></p>
-              
+                <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+                <script>
+                    fetch("https://assets.mailerlite.com/jsonp/1966100/forms/173214256374744366/takel")
+                </script>
+                <!-- KONIEC FORMULARZA MAILERLITE -->
             </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
-
-  
-  <script>
-    function ml_webform_success_34353319() {
-    try {
-        window.top.location.href = 'https://tapwise.eu';
-      } catch (e) {
-        window.location.href = 'https://tapwise.eu';
-      }
-    }
-      </script>
-  
-  
-  
-      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-        <script>
-            fetch("https://assets.mailerlite.com/jsonp/1966100/forms/173214256374744366/takel")
-        </script>
-                <!-- END: Formularz MailerLite -->
-                
-            </div>
-            <!-- END: Sekcja testerów Google -->
-            
         </div>
     </section>
 
@@ -2159,30 +1334,30 @@
                     </div>
                 </div>
                 <div class="column">
-			<form class="contact-form" id="contact-form" action="https://formsubmit.co/tapwisestudio@gmail.com" method="POST" onsubmit="return handleFormSubmit(this)">
-				<input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
-				<input type="hidden" name="_captcha" value="false">
-				<input type="hidden" name="_template" value="table">
-				<input type="hidden" name="_next" value="https://tapwisestudio-code.github.io/#contact?success=true">
-				
-				<div class="form-group">
-					<label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-				<div class="form-group">
-					<label for="email" data-translate="contact-form-email">Email</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-				<div class="form-group">
-					<label for="message" data-translate="contact-form-message">Wiadomość</label>
-					<textarea id="message" name="message" required></textarea>
-				</div>
-				<button type="submit" class="btn" data-translate="contact-form-submit" id="submit-btn">Wyślij wiadomość</button>
-				
-				<div class="form-message success" id="success-message" style="display: none;">
-					✅ Wiadomość została wysłana! Dziękujemy.
-				</div>
-			</form>
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/tapwisestudio@gmail.com" method="POST" onsubmit="return handleFormSubmit(this)">
+                        <input type="hidden" name="_subject" value="Nowa wiadomość ze strony EyeProtector">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://tapwisestudio-code.github.io/#contact?success=true">
+                        
+                        <div class="form-group">
+                            <label for="name" data-translate="contact-form-name">Imię i nazwisko</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="contact-form-email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="contact-form-message">Wiadomość</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-translate="contact-form-submit" id="submit-btn">Wyślij wiadomość</button>
+                        
+                        <div class="form-message success" id="success-message" style="display: none;">
+                            ✅ Wiadomość została wysłana! Dziękujemy.
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -2194,7 +1369,7 @@
                 <div class="footer-logo" data-translate="footer-logo">EyeProtector</div>
                 <p class="footer-mission" data-translate="footer-mission">
                     EyeProtector to niezależna aplikacja tworzona z myślą o realnych potrzebach rodziców i dzieci.<br>
-                    Nie jestem instytucNie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.
+                    Nie jestem instytucją. Jestem człowiekiem, który nie czeka tylko działa.
                 </p>
                 <p data-translate="footer-copyright">
                     © 2025 EyeProtector. Wszystkie prawa zastrzeżone. Aplikacja stworzona przez niezależnego twórcę — bez reklam, bez śledzenia, bez kompromisów. Działa lokalnie. Chroni wzrok dzieci. Szanuje prywatność.
@@ -2252,7 +1427,7 @@
                 observer.observe(section);
             });
             
-            // ROZWIJANIE/ZWIJANIE KART WSKAZÓWEK - POPRAWIONA WERSJA (cały kafelek klikalny)
+            // ROZWIJANIE/ZWIJANIE KART WSKAZÓWEK
             const tipCards = document.querySelectorAll('.tip-card');
             
             tipCards.forEach(card => {
@@ -2324,15 +1499,15 @@
                     "inspiration-story-p1": "&emsp;&emsp;&emsp;Jestem ojcem, na którego barkach spoczywa wychowanie syna. To ja odpowiadam za jego zdrowie, nawyki, bezpieczeństwo.",
                     "inspiration-story-p2": "Nie czekałem, aż pojawią się objawy — pilnowałem go skutecznie. Ale ta skuteczność miała swoją cenę: ciągłe zerkanie, przerywanie pracy, odrywanie się od obowiązków domowych. To było irytujące.",
                     "inspiration-story-p3": "Miałem dość.",
-                    "inspiration-story-p4": "&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem, człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.",
-                    "inspiration-story-p5": "&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka.Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.",
+                    "inspiration-story-p4": "&emsp;&emsp;&emsp;Nie jestem firmą. Nie mam zespołu. Jestem człowiekiem, który widzi problem i nie czeka, aż ktoś go rozwiąże. Świadomym, że technologia jest nieodłączną częścią współczesnego życia i warto uczyć dzieci zdrowych nawyków.",
+                    "inspiration-story-p5": "&emsp;&emsp;&emsp;Szukając rozwiązania, przetestowałem kilka aplikacji. Żadna nie spełniała moich oczekiwań. Wiedziałem już, jak to powinno działać — skutecznie, spokojnie, bez rozpraszania i irytacji dziecka. Przeanalizowałem swoje pomysły, usiadłem do komputera i zacząłem intensywną pracę. Z każdym testem pojawiały się nowe możliwości — funkcje, które są w planach, które jeszcze lepiej będą chronić wzrok i dadzą rodzicom spokój. Prace nad nimi trwają.",
                     "inspiration-story-p6": "Moment przełomowy?",
                     "inspiration-story-p7": "&emsp;&emsp;&emsp;Kiedy poszedłem do syna sprawdzić, czy zachowuje bezpieczną odległość. Mieliśmy krótką rozmowę, a ja… zapomniałem zmniejszyć moc palnika. Obiad się przypalił. Wtedy powiedziałem sobie: dość. Potrzebuję narzędzia, które będzie działać za mnie — cicho, skutecznie, bezpiecznie.",
                     "inspiration-story-p8": "&emsp;&emsp;&emsp;Tworzeniu pierwszej wersji towarzyszyła nadzieja, radość i przede wszystkim ulga. Dziś, gdy rozwijam kolejne funkcje, które diametralnie zwiększą możliwości aplikacji, czuję czystą radość twórczą.",
                     "inspiration-story-p9": "&emsp;&emsp;&emsp;Mój syn wie, że to on był inspiracją. Ma aplikację, używa jej świadomie i mówi, że „robi robotę\".",
                     "inspiration-story-p10": "Podstawowe funkcje EyeProtector zawsze będą dostępne za darmo. Profilaktyka i poprawa podstaw zdrowia powinny być dostępne dla każdego — bez opłat, bez kompromisów.",
                     "inspiration-subtitle-why": "Dlaczego EyeProtector?",
-                    "inspiration-why-p1": "&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą ztoo blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.",
+                    "inspiration-why-p1": "&emsp;&emsp;&emsp;Obserwowałem, jak mój syn i dzieci znajomych spędzają czas z telefonem — niemalże każde zgarbione, z twarzą zbyt blisko ekranu, wpatrzone w gry i filmy. Ekran był zbyt blisko oczu, ciało napięte, koncentracja całkowicie pochłonięta. Zrozumiałem, że to nie jest chwilowy problem.",
                     "inspiration-why-p2": "&emsp;&emsp;&emsp;To era cyfrowa która już zostanie — to codzienność, która wymaga działania.",
                     "inspiration-why-p3": "To nie tylko kwestia wzroku. To także postawa. Zgarbiona sylwetka, pochylona głowa, brak ruchu — to prosta droga do bólów karku, napięć mięśniowych, zwyrodnień kręgosłupa, a nawet przewlekłych bólów głowy. Dzieci nie czują tego od razu nie wiedzą nawet kiedy już mają problem.",
                     "inspiration-why-p4": "Ale ja — jako dorosły, który już to przeszedł — wiem, czym to grozi.",
@@ -2398,7 +1573,7 @@
                     "features-p2": "<span class=\"highlighted-text\">Działanie profilaktyczne</span> - uczy, jak korzystać z technologii w sposób bezpieczny i świadomy, pomaga zapobiegać cyfrowemu zmęczeniu wzroku.",
                     "features-p3": "<span class=\"highlighted-text\">Skuteczna ochrona</span> - Chroni każdego dnia, bez stresu, nie krzyczy, nie przeszkadza, ale działa skutecznie. Pomaga budować dobre nawyki i zapobiega cyfrowemu zmęczeniu oczu.",
                     "features-p4": "<span class=\"highlighted-text\">EyeProtector kompleksowe</span> rozwiązanie zaprojektowane specjalnie z myślą o ochronie wzroku podczas korzystania z urządzeń cyfrowych, nie tylko dla dzieci, ale również dorosłych.",
-                    "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest ztoo blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces i przetwarza obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
+                    "features-p5": "Aby skutecznie chronić wzrok dzieci podczas korzystania z urządzeń mobilnych, EyeProtector wykorzystuje zaawansowane mechanizmy, nie aktywuje się gdy ekran jest zbyt blisko dłoni czy przedmiotów, - sprawdza cyklicznie symetrię i obecność źrenic. Dzięki analizie ich układu aplikacja może precyzyjnie oszacować odległość twarzy od ekranu, niezależnie od modelu telefonu czy dostępności czujników.<br><br>Aplikacja działa w tle — dyskretnie, skutecznie i bez irytacji. Gdy wykryje, że ekran znajduje się zbyt blisko oczu, informuje o tym delikatnym dźwiękiem, ekran zostaje automatycznie przyciemniony do poziomu ustalonego przez rodzica i aktywuje blokadę dotyku. To skutecznie uniemożliwia dalsze korzystanie do czasu odsunięcia telefonu na wcześniej skalibrowaną bezpieczną odległość.<br><br>Cały proces przetwarzania obrazu odbywa się lokalnie, bez przesyłania danych do chmury.",
                     
                     // Functions section
                     "functions-title": "Funkcje",
@@ -2408,7 +1583,7 @@
                     "functions-2-title": "Filtr niebieskiego światła",
                     "functions-2-desc": "To będzie rozbudowa już istniejącej funkcji o predefiniowane ustawienia, będą one filtrować niebieskie światło w zależności od preferencji i oświetlenia otoczenia.",
                     "functions-3-title": "Limit czasu",
-                    "functions-3-desc": "W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzić nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny, dla dziecka,  tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.",
+                    "functions-3-desc": "W aplikacji będzie można ustawić czas korzystania, po którym dziecko nie będzie mogło dalej używać telefonu do czasu gdy rodzic nie wpisze PIN. Cała procedura blokady urządzenia będzie przebiegała w sposób inteligentny i łagodny dla dziecka, tak żeby dziecko nie zostało nagle wyrwane z aktywności na ekranie.",
                     "functions-4-title": "Inteligentna drzemka",
                     "functions-4-desc": "Podstawowa funkcja - Każde wyłączenie ekranu zatrzymuje upływ czasu wyznaczonego do korzystania z urządzenia, ale będzie coś jeszcze ale to niespodzianka.",
                     
@@ -2586,6 +1761,7 @@
                     
                 }
             };
+            
             // Function to apply language
             function applyLanguage(lang) {
                 // Update all elements with data-translate attribute
@@ -2609,12 +1785,50 @@
             let currentLang = 'pl';
             if (userLang.startsWith('pl')) {
                 currentLang = 'pl';
-						} else {
-							currentLang = 'en';
-					}
+            } else {
+                currentLang = 'en';
+            }
             document.querySelectorAll(`[data-lang="${currentLang}"]`).forEach(btn => btn.classList.add('active'));
             document.querySelectorAll(`[data-lang="${currentLang === 'pl' ? 'en' : 'pl'}"]`).forEach(btn => btn.classList.remove('active'));
             applyLanguage(currentLang);
+            
+            // Obsługa formularza kontaktowego
+            function handleFormSubmit(form) {
+                const submitBtn = document.getElementById('submit-btn');
+                const successMessage = document.getElementById('success-message');
+                
+                // Pokaż komunikat sukcesu
+                successMessage.style.display = 'block';
+                
+                // Wyczyść formularz po krótkim opóźnieniu
+                setTimeout(() => {
+                    form.reset();
+                }, 100);
+                
+                // Ukryj komunikat sukcesu po 5 sekundach
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+                
+                // Pozwól formularzowi wysłać się normalnie
+                return true;
+            }
+            
+            // Przypisanie funkcji do globalnego scope
+            window.handleFormSubmit = handleFormSubmit;
+            
+            // Czyszczenie pola email w formularzu MailerLite po wysłaniu
+            const mlForm = document.querySelector('#mlb2-34353319 form');
+            if (mlForm) {
+                mlForm.addEventListener('submit', function() {
+                    setTimeout(function() {
+                        const emailInput = document.querySelector('#mlb2-34353319 input[type="email"]');
+                        if (emailInput) {
+                            emailInput.value = '';
+                        }
+                    }, 1000);
+                });
+            }
         });
     </script>
 </body>
